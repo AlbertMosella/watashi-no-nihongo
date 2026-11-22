@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import type { Card } from '@/domain/card';
+import type { TopicContent } from '@/domain/conversation';
 import { buildDeck } from '@/domain/deck';
 import type { Settings } from '@/domain/settings';
 import { useServices } from './services';
@@ -59,6 +60,30 @@ export function useDeck(): DeckState {
   }, [repository, order, request]);
 
   return result.request === request ? result.state : { status: 'loading', cards: result.state.cards };
+}
+
+export type TopicState =
+  | { readonly status: 'loading' }
+  | { readonly status: 'ready'; readonly content: TopicContent }
+  | { readonly status: 'error'; readonly error: unknown };
+
+/** Carrega les converses d'una temàtica (des del chunk en cache, també offline). */
+export function useTopic(topicId: string): TopicState {
+  const { conversations } = useServices();
+  const [result, setResult] = useState<{ topicId: string; state: TopicState } | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    conversations
+      .getTopic(topicId)
+      .then((content) => !cancelled && setResult({ topicId, state: { status: 'ready', content } }))
+      .catch((error: unknown) => !cancelled && setResult({ topicId, state: { status: 'error', error } }));
+    return () => {
+      cancelled = true;
+    };
+  }, [conversations, topicId]);
+
+  return result?.topicId === topicId ? result.state : { status: 'loading' };
 }
 
 export function useSpeech() {
