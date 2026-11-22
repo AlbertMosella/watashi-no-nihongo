@@ -1,9 +1,11 @@
 import { lazy, Suspense, useState, useSyncExternalStore } from 'react';
-import { useDocumentSettings, useSetting, useUpdateSettings } from '@/app/hooks';
+import { useDocumentSettings, useSearchDeck, useSetting, useUpdateSettings } from '@/app/hooks';
 import { useT } from '@/app/i18n';
 import type { Section } from '@/domain/settings';
 import { Icon, IconButton, SegmentedControl } from '@/ui/components';
+import { cx } from '@/ui/components';
 import { Deck } from './features/deck/Deck';
+import { SearchBar } from './features/search/SearchBar';
 import styles from './App.module.css';
 
 // Els panells no calen per al primer pintat: es carreguen a part.
@@ -41,6 +43,16 @@ function Main() {
   const categoryIds = useSetting('categoryIds');
   const online = useOnline();
 
+  // Cerca de text (no es desa: és una consulta puntual).
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [query, setQuery] = useState('');
+  const searchState = useSearchDeck(query);
+  const searching = section === 'cards' && searchOpen && query.trim().length > 0;
+  const closeSearch = () => {
+    setSearchOpen(false);
+    setQuery('');
+  };
+
   const open = (p: Panel) => {
     setOpened((s) => new Set(s).add(p));
     setPanel(p);
@@ -49,9 +61,13 @@ function Main() {
 
 
   return (
-    <div className={styles.app}>
+    <div className={cx(styles.app, section === 'cards' && searchOpen && styles.withSearch)}>
       {section === 'cards' ? (
-        <Deck onOpenFilters={() => open('categories')} keyboardEnabled={panel === 'none'} />
+        <Deck
+          onOpenFilters={() => open('categories')}
+          keyboardEnabled={panel === 'none'}
+          search={searching ? { query, state: searchState } : null}
+        />
       ) : (
         <Suspense fallback={null}>
           <Conversations />
@@ -78,6 +94,14 @@ function Main() {
             </span>
           )}
           {section === 'cards' && (
+            <IconButton
+              icon={searchOpen ? 'close' : 'search'}
+              label={searchOpen ? t('search.clear') : t('search.open')}
+              aria-pressed={searchOpen}
+              onClick={() => (searchOpen ? closeSearch() : setSearchOpen(true))}
+            />
+          )}
+          {section === 'cards' && !searchOpen && (
             <span className={styles.filter}>
               <IconButton icon="layers" label={t('filters.icon')} onClick={() => open('categories')} />
               {categoryIds.length > 0 && (
@@ -90,6 +114,15 @@ function Main() {
           <IconButton icon="settings" label={t('settings.open')} onClick={() => open('settings')} />
         </div>
       </header>
+
+      {section === 'cards' && searchOpen && (
+        <SearchBar
+          query={query}
+          onChange={setQuery}
+          onClose={closeSearch}
+          count={searching && searchState.status === 'ready' ? searchState.cards.length : null}
+        />
+      )}
 
       <Suspense fallback={null}>
         {opened.has('settings') && <SettingsSheet open={panel === 'settings'} onClose={close} />}

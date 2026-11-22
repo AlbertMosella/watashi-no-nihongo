@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from 'react';
+import { useCallback, useDeferredValue, useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import type { Card } from '@/domain/card';
 import type { TopicContent } from '@/domain/conversation';
 import { buildDeck } from '@/domain/deck';
+import { buildSearchIndex, searchCards } from '@/domain/search';
 import type { Settings } from '@/domain/settings';
 import { useServices } from './services';
 
@@ -60,6 +61,40 @@ export function useDeck(): DeckState {
   }, [repository, order, request]);
 
   return result.request === request ? result.state : { status: 'loading', cards: result.state.cards };
+}
+
+/**
+ * Cerca de text sobre TOTES les targetes (independent de les categories seleccionades).
+ * - Les categories es carreguen el primer cop que es cerca (chunks en cache, també offline).
+ * - L'índex normalitzat es construeix un sol cop per idioma.
+ * - useDeferredValue fa que escriure sigui fluid encara que hi hagi milers de targetes.
+ */
+export function useSearchDeck(query: string): DeckState {
+  const { cards: repository } = useServices();
+  const language = useSetting('language');
+  const active = query.trim().length > 0;
+  const deferredQuery = useDeferredValue(query);
+  const [all, setAll] = useState<readonly Card[] | null>(null);
+  const [error, setError] = useState<unknown>(null);
+
+  useEffect(() => {
+    if (!active || all) return;
+    let cancelled = false;
+    const ids = repository.getCategories().map((c) => c.id);
+    Promise.all(ids.map((id) => repository.getCards(id)))
+      .then((lists) => !cancelled && setAll(lists.flat()))
+      .catch((e: unknown) => !cancelled && setError(e));
+    return () => {
+      cancelled = true;
+    };
+  }, [active, all, repository]);
+
+  const index = useMemo(() => (all ? buildSearchIndex(all, language) : null), [all, language]);
+  const results = useMemo(() => (index ? searchCards(index, deferredQuery) : []), [index, deferredQuery]);
+
+  if (error) return { status: 'error', cards: [], error };
+  if (!index) return { status: 'loading', cards: [] };
+  return { status: 'ready', cards: results };
 }
 
 export type TopicState =

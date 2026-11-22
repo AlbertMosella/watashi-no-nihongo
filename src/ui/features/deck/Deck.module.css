@@ -93,3 +93,8 @@
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+
+.small {
+  margin: 0;
+  font-size: var(--text-sm);
+}

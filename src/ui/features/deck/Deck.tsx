@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useDeck, useSettings, useSpeech } from '@/app/hooks';
+import { useDeck, useSettings, useSpeech, type DeckState } from '@/app/hooks';
 import { categoryLabelKey, useT } from '@/app/i18n';
 import { useServices } from '@/app/services';
 import type { FaceSettings } from '@/domain/faces';
@@ -12,11 +12,14 @@ export interface DeckProps {
   onOpenFilters: () => void;
   /** Quan hi ha un panell obert, el teclat no ha de moure les targetes. */
   keyboardEnabled: boolean;
+  /** Resultats d'una cerca de text: substitueixen el mall de les categories. */
+  search?: { query: string; state: DeckState } | null;
 }
 
-export function Deck({ onOpenFilters, keyboardEnabled }: DeckProps) {
+export function Deck({ onOpenFilters, keyboardEnabled, search }: DeckProps) {
   const t = useT();
-  const deck = useDeck();
+  const categoryDeck = useDeck();
+  const deck = search ? search.state : categoryDeck;
   const settings = useSettings();
   const { cards: repository } = useServices();
   const { available: speechAvailable, speak } = useSpeech();
@@ -39,6 +42,12 @@ export function Deck({ onOpenFilters, keyboardEnabled }: DeckProps) {
 
   // Només la targeta actual pot estar girada; en canviar de targeta, es torna a posar de cara.
   const [flip, setFlip] = useState<{ index: number; flipped: boolean }>({ index: -1, flipped: false });
+  // Mall nou (filtres o resultats de cerca): cap targeta girada.
+  const [prevCards, setPrevCards] = useState(cards);
+  if (prevCards !== cards) {
+    setPrevCards(cards);
+    setFlip({ index: -1, flipped: false });
+  }
   const [hasFlipped, setHasFlipped] = useState(false);
   const onFlip = useCallback((index: number) => {
     setHasFlipped(true);
@@ -93,7 +102,8 @@ export function Deck({ onOpenFilters, keyboardEnabled }: DeckProps) {
     }
   }
 
-  const empty = settings.categoryIds.length === 0;
+  const empty = !search && settings.categoryIds.length === 0;
+  const noResults = !!search && search.state.status === 'ready' && cards.length === 0;
 
   return (
     <main className={styles.deck}>
@@ -108,7 +118,12 @@ export function Deck({ onOpenFilters, keyboardEnabled }: DeckProps) {
         </div>
       </div>
 
-      {empty ? (
+      {noResults ? (
+        <div className={styles.state}>
+          <p>{t('search.empty', { q: search.query.trim() })}</p>
+          <p className={styles.small}>{t('search.hint')}</p>
+        </div>
+      ) : empty ? (
         <div className={styles.state}>
           <p>{t('deck.empty')}</p>
           <Button variant="primary" icon="layers" onClick={onOpenFilters}>
