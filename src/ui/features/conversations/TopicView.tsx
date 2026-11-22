@@ -1,20 +1,34 @@
-import { useMemo, type CSSProperties } from 'react';
+import { useCallback, useMemo, useState, type CSSProperties, type ReactNode } from 'react';
 import { useSettings, useSpeech, useTopic, useUpdateSettings } from '@/app/hooks';
 import { topicLabelKey, useT } from '@/app/i18n';
 import { LEARNER, type ConversationSettings, type Topic, type TopicContent } from '@/domain/conversation';
 import { toJapaneseText } from '@/domain/display';
-import { IconButton, SegmentedControl } from '@/ui/components';
+import { Icon, IconButton, SegmentedControl } from '@/ui/components';
 import { Furigana } from '../deck/Furigana';
 import { Bubble } from './Bubble';
 import styles from './Conversations.module.css';
 
 type Mode = 'read' | 'practice';
 
+const PHRASES_BLOCK = 'phrases';
+
 export function TopicView({ topic, onBack }: { topic: Topic; onBack: () => void }) {
   const t = useT();
   const state = useTopic(topic.id);
   const s = useSettings();
   const update = useUpdateSettings();
+
+  // Blocs desplegats. Viu aquí (i no dins del cos) perquè es mantinguin oberts en canviar de mode.
+  const [openIds, setOpenIds] = useState<ReadonlySet<string>>(() => new Set());
+  const toggleBlock = useCallback((id: string, open: boolean) => {
+    setOpenIds((prev) => {
+      if (prev.has(id) === open) return prev;
+      const next = new Set(prev);
+      if (open) next.add(id);
+      else next.delete(id);
+      return next;
+    });
+  }, []);
 
   const settings = useMemo<ConversationSettings>(
     () => ({
@@ -57,22 +71,40 @@ export function TopicView({ topic, onBack }: { topic: Topic; onBack: () => void 
       )}
       {state.status === 'ready' && (
         // La key reinicia les bombolles destapades en canviar de mode.
-        <TopicBody key={String(s.practice)} content={state.content} settings={settings} />
+        <TopicBody
+          key={String(s.practice)}
+          content={state.content}
+          settings={settings}
+          openIds={openIds}
+          onToggle={toggleBlock}
+        />
       )}
     </article>
   );
 }
 
-function TopicBody({ content, settings }: { content: TopicContent; settings: ConversationSettings }) {
+interface TopicBodyProps {
+  content: TopicContent;
+  settings: ConversationSettings;
+  openIds: ReadonlySet<string>;
+  onToggle: (id: string, open: boolean) => void;
+}
+
+function TopicBody({ content, settings, openIds, onToggle }: TopicBodyProps) {
   const t = useT();
   const { available, speak } = useSpeech();
   const lang = settings.language;
 
   return (
-    <>
+    <div className={styles.blocks}>
       {content.conversations.map((conversation) => (
-        <section key={conversation.id} className={styles.conversation}>
-          <h2 className={styles.conversationTitle}>{conversation.title[lang]}</h2>
+        <Block
+          key={conversation.id}
+          id={conversation.id}
+          title={conversation.title[lang]}
+          open={openIds.has(conversation.id)}
+          onToggle={onToggle}
+        >
           <ol className={styles.chat}>
             {conversation.lines.map((line, i) => (
               <Bubble
@@ -87,11 +119,16 @@ function TopicBody({ content, settings }: { content: TopicContent; settings: Con
               />
             ))}
           </ol>
-        </section>
+        </Block>
       ))}
 
-      <section className={styles.conversation}>
-        <h2 className={styles.conversationTitle}>{t('conversations.phrases')}</h2>
+      <Block
+        id={PHRASES_BLOCK}
+        title={t('conversations.phrases')}
+        icon="★"
+        open={openIds.has(PHRASES_BLOCK)}
+        onToggle={onToggle}
+      >
         <ul className={styles.phrases}>
           {content.phrases.map((phrase, i) => {
             const jp = toJapaneseText(phrase.japanese, phrase.romaji, settings);
@@ -107,7 +144,43 @@ function TopicBody({ content, settings }: { content: TopicContent; settings: Con
             );
           })}
         </ul>
-      </section>
-    </>
+      </Block>
+    </div>
+  );
+}
+
+interface BlockProps {
+  id: string;
+  title: string;
+  icon?: string;
+  open: boolean;
+  onToggle: (id: string, open: boolean) => void;
+  children: ReactNode;
+}
+
+/**
+ * Bloc plegable sobre <details> natiu (accessible i amb teclat sense JS extra).
+ * El contingut només es pinta quan està obert: menys DOM i les bombolles s'animen en obrir-lo.
+ */
+function Block({ id, title, icon, open, onToggle, children }: BlockProps) {
+  return (
+    <details
+      className={styles.block}
+      open={open}
+      onToggle={(e) => onToggle(id, (e.currentTarget as HTMLDetailsElement).open)}
+    >
+      <summary className={styles.blockSummary}>
+        {icon && (
+          <span className={styles.blockIcon} aria-hidden="true">
+            {icon}
+          </span>
+        )}
+        <span className={styles.blockTitle}>{title}</span>
+        <span className={styles.chevron} aria-hidden="true">
+          <Icon name="back" size={18} />
+        </span>
+      </summary>
+      {open && <div className={styles.blockContent}>{children}</div>}
+    </details>
   );
 }

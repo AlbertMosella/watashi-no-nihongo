@@ -40,7 +40,7 @@ export function Conversations() {
   return (
     <div ref={scrollRef} className={styles.scroller}>
       <div className={styles.page}>
-        {topic ? <TopicView topic={topic} onBack={back} /> : <TopicList topics={conversations.getTopics()} onOpen={open} />}
+        {topic ? <TopicView key={topic.id} topic={topic} onBack={back} /> : <TopicList topics={conversations.getTopics()} onOpen={open} />}
       </div>
     </div>
   );
