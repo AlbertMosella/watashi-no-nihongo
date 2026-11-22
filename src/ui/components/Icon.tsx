@@ -47,6 +47,13 @@ const PATHS = {
   ),
   check: <path d="M20 6 9 17l-5-5" />,
   back: <path d="m15 18-6-6 6-6" />,
+  install: (
+    <>
+      <rect x="6" y="2" width="12" height="20" rx="2" />
+      <path d="M12 7v7" />
+      <path d="m9 11 3 3 3-3" />
+    </>
+  ),
   search: (
     <>
       <circle cx="11" cy="11" r="7" />

@@ -9,7 +9,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-4);
   max-width: 420px;
   min-height: 100%;
   margin: 0 auto;
@@ -29,8 +29,8 @@
   --hue: 345;
   position: relative;
   align-self: center;
-  width: 120px;
-  height: 150px;
+  width: 100px;
+  height: 125px;
   perspective: 800px;
 }
 
@@ -63,7 +63,7 @@
   inset: 0;
   display: grid;
   place-items: center;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -140,6 +140,17 @@
   color: var(--color-accent);
 }
 
+.installText {
+  flex: 1;
+}
+
+.install {
+  flex: none;
+  align-self: center;
+  min-height: 32px;
+  padding: 0 var(--space-3);
+}
+
 .start {
   width: 100%;
   min-height: 52px;
@@ -152,11 +163,11 @@
     padding-top: calc(var(--safe-top) + var(--space-4));
   }
   .content {
-    gap: var(--space-4);
+    gap: var(--space-3);
   }
   .illustration {
-    width: 84px;
-    height: 104px;
+    width: 64px;
+    height: 80px;
   }
   .cardBack,
   .cardFront {
@@ -164,7 +175,7 @@
   }
   .faceA,
   .faceB {
-    font-size: 2.4rem;
+    font-size: 1.9rem;
   }
   .title {
     font-size: var(--text-lg);
@@ -178,6 +189,11 @@
   .points {
     gap: var(--space-2);
     padding: var(--space-3);
+    font-size: 0.8125rem;
+  }
+  .pointIcon {
+    width: 28px;
+    height: 28px;
   }
   .start {
     min-height: 48px;

@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { InstallPrompt } from '@/app/installPrompt';
 import { SETTINGS_KEY } from '@/app/settingsStore';
 import { MemoryStorage } from '@/data/localStorageAdapter';
 import { createTestServices, withServices } from '@/test/testServices';
@@ -36,5 +37,20 @@ describe('Onboarding', () => {
     await userEvent.click(screen.getByRole('radio', { name: 'Castellano' }));
     await userEvent.click(screen.getByRole('button', { name: 'Empezar' }));
     expect(storage.read(SETTINGS_KEY)).toMatchObject({ onboarded: true, language: 'es' });
+  });
+
+  it('explica breument com instal·lar l’app', () => {
+    setup();
+    expect(screen.getByText(/instal·la-la des del menú del navegador/)).toBeInTheDocument();
+  });
+
+  it('no parla d’instal·lar si ja s’executa instal·lada', () => {
+    const standalone = Object.assign(new EventTarget(), {
+      matchMedia: () => ({ matches: true }),
+      navigator: { userAgent: '', maxTouchPoints: 0 },
+    }) as unknown as Window;
+    const services = { ...createTestServices(), install: new InstallPrompt(standalone) };
+    render(<Onboarding />, { wrapper: withServices(services) });
+    expect(screen.queryByText(/instal·la-la/)).toBeNull();
   });
 });

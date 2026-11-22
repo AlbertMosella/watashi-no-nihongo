@@ -1,6 +1,7 @@
 import { useId } from 'react';
-import { useSetting, useUpdateSettings } from '@/app/hooks';
+import { useInstall, useSetting, useUpdateSettings } from '@/app/hooks';
 import { LANGUAGE_ENDONYMS, useT, type MessageKey } from '@/app/i18n';
+import type { InstallMode } from '@/app/installPrompt';
 import { STUDENT_LANGUAGES, type StudentLanguage } from '@/domain/language';
 import { Button, Icon, SegmentedControl, type IconName } from '@/ui/components';
 import styles from './Onboarding.module.css';
@@ -11,6 +12,13 @@ const POINTS: readonly { icon: IconName; text: MessageKey }[] = [
   { icon: 'swap', text: 'onboarding.front' },
 ];
 
+/** Text del punt d'instal·lació segons el dispositiu (no surt si ja està instal·lada). */
+const INSTALL_TEXT: Readonly<Record<Exclude<InstallMode, 'installed'>, MessageKey>> = {
+  prompt: 'onboarding.install',
+  ios: 'onboarding.installIos',
+  manual: 'onboarding.installManual',
+};
+
 /**
  * Pantalla de benvinguda (només el primer cop). En triar l'idioma, tota la pantalla
  * canvia d'idioma a l'instant; "Començar" desa `onboarded` i ja no torna a sortir.
@@ -20,6 +28,7 @@ export function Onboarding() {
   const language = useSetting('language');
   const update = useUpdateSettings();
   const titleId = useId();
+  const install = useInstall();
 
   return (
     <main className={styles.screen} aria-labelledby={titleId}>
@@ -53,6 +62,19 @@ export function Onboarding() {
               <span>{t(p.text)}</span>
             </li>
           ))}
+          {install.mode !== 'installed' && (
+            <li>
+              <span className={styles.pointIcon} aria-hidden="true">
+                <Icon name="install" size={18} />
+              </span>
+              <span className={styles.installText}>{t(INSTALL_TEXT[install.mode])}</span>
+              {install.mode === 'prompt' && (
+                <Button size="sm" className={styles.install} onClick={() => void install.prompt()}>
+                  {t('onboarding.installAction')}
+                </Button>
+              )}
+            </li>
+          )}
         </ul>
 
         <SegmentedControl<StudentLanguage>
