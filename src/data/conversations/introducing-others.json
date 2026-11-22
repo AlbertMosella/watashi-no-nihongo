@@ -1,0 +1,135 @@
+{
+  "speakers": {
+    "tanaka": { "ca": "Tanaka", "es": "Tanaka", "en": "Tanaka" },
+    "sato": { "ca": "Sato", "es": "Sato", "en": "Sato" },
+    "suzuki": { "ca": "Suzuki", "es": "Suzuki", "en": "Suzuki" },
+    "yamada": { "ca": "Yamada", "es": "Yamada", "en": "Yamada" },
+    "laia": { "ca": "Laia", "es": "Laia", "en": "Laia" }
+  },
+  "conversations": [
+    {
+      "id": "partner",
+      "title": { "ca": "La teva parella", "es": "Tu pareja", "en": "Your partner" },
+      "lines": [
+        { "s": "you", "jp": "田中[たなか]さん、こちらはライアです。私[わたし]のパートナーです。", "r": "tanaka-san, kochira wa raia desu. watashi no paatonaa desu.", "ca": "Tanaka, et presento la Laia. És la meva parella.", "es": "Tanaka, te presento a Laia. Es mi pareja.", "en": "Tanaka, this is Laia. She's my partner." },
+        { "s": "laia", "jp": "はじめまして。ライアです。よろしくお願[ねが]いします。", "r": "hajimemashite. raia desu. yoroshiku onegaishimasu.", "ca": "Encantada. Soc la Laia. Molt de gust.", "es": "Encantada. Soy Laia. Mucho gusto.", "en": "Nice to meet you. I'm Laia. Pleased to meet you." },
+        { "s": "tanaka", "jp": "はじめまして。田中[たなか]です。ライアさんもバルセロナの方[かた]ですか。", "r": "hajimemashite. tanaka desu. raia-san mo baruserona no kata desu ka?", "ca": "Encantat. Soc en Tanaka. Tu també ets de Barcelona, Laia?", "es": "Encantado. Soy Tanaka. ¿Tú también eres de Barcelona, Laia?", "en": "Nice to meet you. I'm Tanaka. Are you from Barcelona too, Laia?" },
+        { "s": "laia", "jp": "はい。二人[ふたり]ともバルセロナに住[す]んでいます。", "r": "hai. futari tomo baruserona ni sunde imasu.", "ca": "Sí. Tots dos vivim a Barcelona.", "es": "Sí. Los dos vivimos en Barcelona.", "en": "Yes. We both live in Barcelona." },
+        { "s": "tanaka", "jp": "お二人[ふたり]とも日本[にほん]は初[はじ]めてですか。", "r": "ofutari tomo nihon wa hajimete desu ka?", "ca": "És la primera vegada que veniu al Japó, tots dos?", "es": "¿Es la primera vez que venís a Japón los dos?", "en": "Is it the first time in Japan for both of you?" },
+        { "s": "you", "jp": "私[わたし]は初[はじ]めてです。ライアは二回目[にかいめ]です。", "r": "watashi wa hajimete desu. raia wa nikaime desu.", "ca": "Jo sí, és la primera. Per a la Laia és la segona.", "es": "Yo sí, es la primera. Para Laia es la segunda.", "en": "It's my first time. It's Laia's second." }
+      ]
+    },
+    {
+      "id": "friend",
+      "title": { "ca": "Un amic", "es": "Un amigo", "en": "A friend" },
+      "lines": [
+        { "s": "you", "jp": "ライア、こちらは友達[ともだち]の鈴木[すずき]さんです。", "r": "raia, kochira wa tomodachi no suzuki-san desu.", "ca": "Laia, et presento el meu amic Suzuki.", "es": "Laia, te presento a mi amigo Suzuki.", "en": "Laia, this is my friend Suzuki." },
+        { "s": "suzuki", "jp": "はじめまして。鈴木[すずき]です。", "r": "hajimemashite. suzuki desu.", "ca": "Encantat. Soc en Suzuki.", "es": "Encantado. Soy Suzuki.", "en": "Nice to meet you. I'm Suzuki." },
+        { "s": "laia", "jp": "はじめまして。ライアです。マルクからよく話[はなし]を聞[き]いています。", "r": "hajimemashite. raia desu. maruku kara yoku hanashi o kiite imasu.", "ca": "Encantada. Soc la Laia. En Marc m'ha parlat molt de tu.", "es": "Encantada. Soy Laia. Marc me ha hablado mucho de ti.", "en": "Nice to meet you. I'm Laia. Marc has told me a lot about you." },
+        { "s": "you", "jp": "鈴木[すずき]さんは三年前[さんねんまえ]、バルセロナに留学[りゅうがく]していました。", "r": "suzuki-san wa san nen mae, baruserona ni ryuugaku shite imashita.", "ca": "Fa tres anys, en Suzuki va estudiar a Barcelona.", "es": "Hace tres años, Suzuki estudió en Barcelona.", "en": "Suzuki studied in Barcelona three years ago." },
+        { "s": "suzuki", "jp": "はい。その時[とき]、マルクさんと友達[ともだち]になりました。", "r": "hai. sono toki, maruku-san to tomodachi ni narimashita.", "ca": "Sí. Llavors em vaig fer amic d'en Marc.", "es": "Sí. Entonces me hice amigo de Marc.", "en": "Yes. That's when Marc and I became friends." },
+        { "s": "laia", "jp": "そうですか。よろしくお願[ねが]いします。", "r": "sou desu ka. yoroshiku onegaishimasu.", "ca": "Ah, sí? Molt de gust.", "es": "¿Ah, sí? Mucho gusto.", "en": "I see. Pleased to meet you." }
+      ]
+    },
+    {
+      "id": "family",
+      "title": { "ca": "La família", "es": "La familia", "en": "Your family" },
+      "lines": [
+        { "s": "sato", "jp": "マルクさん、それは家族[かぞく]の写真[しゃしん]ですか。", "r": "maruku-san, sore wa kazoku no shashin desu ka?", "ca": "Marc, això és una foto de la teva família?", "es": "Marc, ¿eso es una foto de tu familia?", "en": "Marc, is that a photo of your family?" },
+        { "s": "you", "jp": "はい。これは母[はは]で、これは父[ちち]です。", "r": "hai. kore wa haha de, kore wa chichi desu.", "ca": "Sí. Aquesta és la meva mare, i aquest, el meu pare.", "es": "Sí. Esta es mi madre, y este, mi padre.", "en": "Yes. This is my mother, and this is my father." },
+        { "s": "sato", "jp": "こちらの方[かた]は？", "r": "kochira no kata wa?", "ca": "I aquesta persona?", "es": "¿Y esta persona?", "en": "And who's this?" },
+        { "s": "you", "jp": "姉[あね]です。マドリードに住[す]んでいます。", "r": "ane desu. madoriido ni sunde imasu.", "ca": "És la meva germana gran. Viu a Madrid.", "es": "Es mi hermana mayor. Vive en Madrid.", "en": "That's my older sister. She lives in Madrid." },
+        { "s": "sato", "jp": "何人[なんにん]家族[かぞく]ですか。", "r": "nannin kazoku desu ka?", "ca": "Quants sou a la família?", "es": "¿Cuántos sois en tu familia?", "en": "How many people are there in your family?" },
+        { "s": "you", "jp": "四人[よにん]家族[かぞく]です。", "r": "yonin kazoku desu.", "ca": "Som quatre.", "es": "Somos cuatro.", "en": "There are four of us." },
+        { "s": "sato", "jp": "お姉[ねえ]さん、優[やさ]しそうですね。", "r": "oneesan, yasashisou desu ne.", "ca": "La teva germana sembla molt amable.", "es": "Tu hermana parece muy simpática.", "en": "Your sister looks really kind." }
+      ]
+    },
+    {
+      "id": "colleague",
+      "title": { "ca": "Un company de feina", "es": "Un compañero de trabajo", "en": "A colleague" },
+      "lines": [
+        { "s": "tanaka", "jp": "マルクさん、紹介[しょうかい]します。会社[かいしゃ]の同僚[どうりょう]の山田[やまだ]さんです。", "r": "maruku-san, shoukai shimasu. kaisha no douryou no yamada-san desu.", "ca": "Marc, et presento el Yamada, un company de feina.", "es": "Marc, te presento a Yamada, un compañero de trabajo.", "en": "Marc, let me introduce you. This is Yamada, a colleague from work." },
+        { "s": "yamada", "jp": "はじめまして。山田[やまだ]です。", "r": "hajimemashite. yamada desu.", "ca": "Encantat. Soc en Yamada.", "es": "Encantado. Soy Yamada.", "en": "Nice to meet you. I'm Yamada." },
+        { "s": "you", "jp": "はじめまして。マルクです。よろしくお願[ねが]いします。", "r": "hajimemashite. maruku desu. yoroshiku onegaishimasu.", "ca": "Encantat. Soc en Marc. Molt de gust.", "es": "Encantado. Soy Marc. Mucho gusto.", "en": "Nice to meet you. I'm Marc. Pleased to meet you." },
+        { "s": "you", "jp": "山田[やまだ]さんもエンジニアですか。", "r": "yamada-san mo enjinia desu ka?", "ca": "Tu també ets enginyer, Yamada?", "es": "¿Tú también eres ingeniero, Yamada?", "en": "Are you an engineer too, Yamada?" },
+        { "s": "yamada", "jp": "いいえ、私[わたし]はデザイナーです。", "r": "iie, watashi wa dezainaa desu.", "ca": "No, jo soc dissenyador.", "es": "No, yo soy diseñador.", "en": "No, I'm a designer." },
+        { "s": "tanaka", "jp": "山田[やまだ]さんはスペイン語[ご]が少[すこ]し話[はな]せますよ。", "r": "yamada-san wa supeingo ga sukoshi hanasemasu yo.", "ca": "El Yamada parla una mica de castellà, eh!", "es": "Yamada habla un poco de español, ¿eh?", "en": "Yamada can speak a little Spanish, you know." },
+        { "s": "you", "jp": "本当[ほんとう]ですか。すごいですね。", "r": "hontou desu ka? sugoi desu ne.", "ca": "De debò? Que bé!", "es": "¿De verdad? ¡Qué bien!", "en": "Really? That's great!" }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "jp": "こちらは〜です。",
+      "r": "kochira wa ~ desu.",
+      "ca": "Et presento ~. / Aquest és ~.",
+      "es": "Te presento a ~. / Este es ~.",
+      "en": "This is ~.",
+      "note": {
+        "ca": "La manera educada de presentar algú que és present. こちら és més respectuós que これ, que només es fa servir per a coses.",
+        "es": "La forma educada de presentar a alguien que está presente. こちら es más respetuoso que これ, que solo se usa para cosas.",
+        "en": "The polite way to introduce someone who is present. こちら is more respectful than これ, which is only for things."
+      }
+    },
+    {
+      "jp": "友達[ともだち]の〜さんです。",
+      "r": "tomodachi no ~-san desu.",
+      "ca": "És el meu amic ~.",
+      "es": "Es mi amigo ~.",
+      "en": "This is my friend ~.",
+      "note": {
+        "ca": "A の B: «B, que és A». Funciona amb qualsevol relació: 同僚の山田さん (el meu company Yamada). Als altres sí que els poses さん.",
+        "es": "A の B: «B, que es A». Funciona con cualquier relación: 同僚の山田さん (mi compañero Yamada). A los demás sí se les pone さん.",
+        "en": "A の B: \"B, who is my A\". Works for any relationship: 同僚の山田さん (my colleague Yamada). Other people do get さん."
+      }
+    },
+    {
+      "jp": "紹介[しょうかい]します。",
+      "r": "shoukai shimasu.",
+      "ca": "Et presento...",
+      "es": "Te presento...",
+      "en": "Let me introduce...",
+      "note": {
+        "ca": "Es diu just abans de presentar algú, sobretot en situacions una mica formals.",
+        "es": "Se dice justo antes de presentar a alguien, sobre todo en situaciones algo formales.",
+        "en": "Said right before introducing someone, especially in slightly formal settings."
+      }
+    },
+    {
+      "jp": "母[はは]・お母[かあ]さん",
+      "r": "haha, okaasan",
+      "ca": "La meva mare · La teva mare",
+      "es": "Mi madre · Tu madre",
+      "en": "My mother · Your mother",
+      "note": {
+        "ca": "Per a la teva família fas servir paraules humils (母, 父, 姉); per a la dels altres, les respectuoses (お母さん, お父さん, お姉さん).",
+        "es": "Para tu familia usas palabras humildes (母, 父, 姉); para la de los demás, las respetuosas (お母さん, お父さん, お姉さん).",
+        "en": "For your own family use the humble words (母, 父, 姉); for someone else's, the respectful ones (お母さん, お父さん, お姉さん)."
+      }
+    },
+    {
+      "jp": "〜人[にん]家族[かぞく]です。",
+      "r": "~ nin kazoku desu.",
+      "ca": "Som ~ a la família.",
+      "es": "Somos ~ en la familia.",
+      "en": "There are ~ people in my family.",
+      "note": {
+        "ca": "Compte: 1 i 2 persones són irregulars (一人 ひとり, 二人 ふたり); 4 és 四人 よにん.",
+        "es": "Ojo: 1 y 2 personas son irregulares (一人 ひとり, 二人 ふたり); 4 es 四人 よにん.",
+        "en": "Note: 1 and 2 people are irregular (一人 ひとり, 二人 ふたり); 4 is 四人 よにん."
+      }
+    },
+    {
+      "jp": "二人[ふたり]とも",
+      "r": "futari tomo",
+      "ca": "Tots dos",
+      "es": "Los dos",
+      "en": "Both of us / both of them",
+      "note": {
+        "ca": "Per parlar de dues persones alhora. Per als altres, més educat: お二人とも.",
+        "es": "Para hablar de dos personas a la vez. Para los demás, más educado: お二人とも.",
+        "en": "To talk about two people at once. For other people, more polite: お二人とも."
+      }
+    }
+  ]
+}

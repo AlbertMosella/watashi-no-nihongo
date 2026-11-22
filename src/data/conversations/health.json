@@ -1,0 +1,56 @@
+{
+  "speakers": {
+    "pharmacist": { "ca": "Farmacèutica", "es": "Farmacéutica", "en": "Pharmacist" },
+    "passerby": { "ca": "Vianant", "es": "Transeúnte", "en": "Passer-by" }
+  },
+  "conversations": [
+    {
+      "id": "headache",
+      "title": { "ca": "Mal de cap a la farmàcia", "es": "Dolor de cabeza en la farmacia", "en": "A headache at the pharmacy" },
+      "lines": [
+        { "s": "you", "jp": "すみません、頭[あたま]が痛[いた]いです。いい薬[くすり]はありますか。", "r": "sumimasen, atama ga itai desu. ii kusuri wa arimasu ka?", "ca": "Perdoni, em fa mal el cap. Té res que vagi bé?", "es": "Perdone, me duele la cabeza. ¿Tiene algo que vaya bien?", "en": "Excuse me, I have a headache. Do you have anything good for it?" },
+        { "s": "pharmacist", "jp": "いつからですか。", "r": "itsu kara desu ka?", "ca": "Des de quan?", "es": "¿Desde cuándo?", "en": "Since when?" },
+        { "s": "you", "jp": "今朝[けさ]からです。", "r": "kesa kara desu.", "ca": "Des d'aquest matí.", "es": "Desde esta mañana.", "en": "Since this morning." },
+        { "s": "pharmacist", "jp": "熱[ねつ]はありますか。", "r": "netsu wa arimasu ka?", "ca": "Té febre?", "es": "¿Tiene fiebre?", "en": "Do you have a fever?" },
+        { "s": "you", "jp": "いいえ、熱[ねつ]はありません。", "r": "iie, netsu wa arimasen.", "ca": "No, no tinc febre.", "es": "No, no tengo fiebre.", "en": "No, I don't have a fever." },
+        { "s": "pharmacist", "jp": "では、この薬[くすり]をどうぞ。一日[いちにち]三回[さんかい]、食後[しょくご]に飲[の]んでください。", "r": "dewa, kono kusuri o douzo. ichinichi sankai, shokugo ni nonde kudasai.", "ca": "Doncs li recomano aquest medicament. Prengui'l tres cops al dia, després de menjar.", "es": "Entonces, le recomiendo este medicamento. Tómelo tres veces al día, después de comer.", "en": "Then try this medicine. Take it three times a day, after meals." },
+        { "s": "you", "jp": "わかりました。これをください。", "r": "wakarimashita. kore o kudasai.", "ca": "D'acord. Me l'emporto.", "es": "De acuerdo. Me lo llevo.", "en": "All right. I'll take it." }
+      ]
+    },
+    {
+      "id": "fever",
+      "title": { "ca": "Febre i mal de coll", "es": "Fiebre y dolor de garganta", "en": "Fever and a sore throat" },
+      "lines": [
+        { "s": "pharmacist", "jp": "どうしましたか。", "r": "dou shimashita ka?", "ca": "Què li passa?", "es": "¿Qué le pasa?", "en": "What seems to be the problem?" },
+        { "s": "you", "jp": "熱[ねつ]があります。それから、喉[のど]も痛[いた]いです。", "r": "netsu ga arimasu. sorekara, nodo mo itai desu.", "ca": "Tinc febre. I també em fa mal el coll.", "es": "Tengo fiebre. Y también me duele la garganta.", "en": "I have a fever. My throat hurts too." },
+        { "s": "pharmacist", "jp": "何度[なんど]ですか。", "r": "nando desu ka?", "ca": "Quants graus té?", "es": "¿Cuántos grados tiene?", "en": "How high is it?" },
+        { "s": "you", "jp": "三十八度[さんじゅうはちど]です。", "r": "sanjuuhachi-do desu.", "ca": "Trenta-vuit graus.", "es": "Treinta y ocho grados.", "en": "Thirty-eight degrees." },
+        { "s": "pharmacist", "jp": "風邪[かぜ]かもしれませんね。この薬[くすり]を飲[の]んで、ゆっくり休[やす]んでください。", "r": "kaze kamo shiremasen ne. kono kusuri o nonde, yukkuri yasunde kudasai.", "ca": "Potser és un refredat. Prengui aquest medicament i descansi bé.", "es": "Puede que sea un resfriado. Tome este medicamento y descanse bien.", "en": "It might be a cold. Take this medicine and get plenty of rest." },
+        { "s": "you", "jp": "近[ちか]くに病院[びょういん]はありますか。", "r": "chikaku ni byouin wa arimasu ka?", "ca": "Hi ha algun hospital a prop?", "es": "¿Hay algún hospital cerca?", "en": "Is there a hospital nearby?" },
+        { "s": "pharmacist", "jp": "はい、駅[えき]の前[まえ]にありますよ。", "r": "hai, eki no mae ni arimasu yo.", "ca": "Sí, n'hi ha un davant de l'estació.", "es": "Sí, hay uno delante de la estación.", "en": "Yes, there's one in front of the station." }
+      ]
+    },
+    {
+      "id": "emergency",
+      "title": { "ca": "Una emergència", "es": "Una emergencia", "en": "An emergency" },
+      "lines": [
+        { "s": "you", "jp": "すみません、助[たす]けてください。", "r": "sumimasen, tasukete kudasai.", "ca": "Perdoni, ajudi'm, si us plau!", "es": "Perdone, ¡ayúdeme, por favor!", "en": "Excuse me, please help me!" },
+        { "s": "passerby", "jp": "どうしましたか。", "r": "dou shimashita ka?", "ca": "Què ha passat?", "es": "¿Qué ha pasado?", "en": "What happened?" },
+        { "s": "you", "jp": "友達[ともだち]が倒[たお]れました。", "r": "tomodachi ga taoremashita.", "ca": "El meu amic s'ha desmaiat.", "es": "Mi amigo se ha desmayado.", "en": "My friend has collapsed." },
+        { "s": "you", "jp": "救急車[きゅうきゅうしゃ]を呼[よ]んでください。", "r": "kyuukyuusha o yonde kudasai.", "ca": "Cridi una ambulància, si us plau.", "es": "Llame a una ambulancia, por favor.", "en": "Please call an ambulance." },
+        { "s": "passerby", "jp": "わかりました。すぐ呼[よ]びます。", "r": "wakarimashita. sugu yobimasu.", "ca": "D'acord. Ara mateix en crido una.", "es": "De acuerdo. La llamo ahora mismo.", "en": "OK. I'll call one right away." },
+        { "s": "passerby", "jp": "救急車[きゅうきゅうしゃ]はすぐ来[き]ます。大丈夫[だいじょうぶ]ですよ。", "r": "kyuukyuusha wa sugu kimasu. daijoubu desu yo.", "ca": "L'ambulància arriba de seguida. Tranquil.", "es": "La ambulancia llega enseguida. Tranquilo.", "en": "The ambulance is coming soon. It's going to be OK." },
+        { "s": "you", "jp": "ありがとうございます。", "r": "arigatou gozaimasu.", "ca": "Moltes gràcies.", "es": "Muchas gracias.", "en": "Thank you so much." }
+      ]
+    }
+  ],
+  "phrases": [
+    { "jp": "〜が痛[いた]いです。", "r": "~ ga itai desu.", "ca": "Em fa mal ~.", "es": "Me duele ~.", "en": "My ~ hurts.", "note": { "ca": "頭 (cap), 喉 (coll), お腹 (panxa), 歯 (queixal)... + が痛いです.", "es": "頭 (cabeza), 喉 (garganta), お腹 (barriga), 歯 (muela)... + が痛いです.", "en": "頭 (head), 喉 (throat), お腹 (stomach), 歯 (tooth)... + が痛いです." } },
+    { "jp": "頭[あたま]が痛[いた]いです。", "r": "atama ga itai desu.", "ca": "Em fa mal el cap.", "es": "Me duele la cabeza.", "en": "I have a headache." },
+    { "jp": "熱[ねつ]があります。", "r": "netsu ga arimasu.", "ca": "Tinc febre.", "es": "Tengo fiebre.", "en": "I have a fever.", "note": { "ca": "Literalment «hi ha febre». En negatiu: 熱はありません.", "es": "Literalmente «hay fiebre». En negativo: 熱はありません.", "en": "Literally \"there is fever\". Negative: 熱はありません." } },
+    { "jp": "〜はありますか。", "r": "~ wa arimasu ka?", "ca": "Té ~? / Hi ha ~?", "es": "¿Tiene ~? / ¿Hay ~?", "en": "Do you have ~? / Is there ~?", "note": { "ca": "Per demanar un medicament (いい薬はありますか) o un lloc (近くに病院はありますか).", "es": "Para pedir un medicamento (いい薬はありますか) o un lugar (近くに病院はありますか).", "en": "To ask for a medicine (いい薬はありますか) or a place (近くに病院はありますか)." } },
+    { "jp": "助[たす]けてください。", "r": "tasukete kudasai.", "ca": "Ajudi'm, si us plau!", "es": "¡Ayúdeme, por favor!", "en": "Please help me!", "note": { "ca": "En una emergència de debò també es pot cridar només 助けて！", "es": "En una emergencia de verdad también se puede gritar solo 助けて！", "en": "In a real emergency you can also just shout 助けて！" } },
+    { "jp": "救急車[きゅうきゅうしゃ]を呼[よ]んでください。", "r": "kyuukyuusha o yonde kudasai.", "ca": "Cridi una ambulància, si us plau.", "es": "Llame a una ambulancia, por favor.", "en": "Please call an ambulance.", "note": { "ca": "Al Japó, el número d'ambulàncies i bombers és el 119.", "es": "En Japón, el número de ambulancias y bomberos es el 119.", "en": "In Japan, the number for ambulances and the fire brigade is 119." } },
+    { "jp": "〜てください。", "r": "~ te kudasai.", "ca": "~, si us plau.", "es": "~, por favor.", "en": "Please ~.", "note": { "ca": "Petició amb la forma en -te del verb: 飲んでください (prengui'l), 休んでください (descansi).", "es": "Petición con la forma en -te del verbo: 飲んでください (tómelo), 休んでください (descanse).", "en": "A request using the verb's -te form: 飲んでください (take it), 休んでください (rest)." } }
+  ]
+}

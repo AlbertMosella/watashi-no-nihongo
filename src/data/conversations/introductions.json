@@ -1,0 +1,139 @@
+{
+  "speakers": {
+    "tanaka": { "ca": "Tanaka", "es": "Tanaka", "en": "Tanaka" },
+    "sato": { "ca": "Sato", "es": "Sato", "en": "Sato" },
+    "suzuki": { "ca": "Suzuki", "es": "Suzuki", "en": "Suzuki" }
+  },
+  "conversations": [
+    {
+      "id": "name",
+      "title": { "ca": "El teu nom", "es": "Tu nombre", "en": "Your name" },
+      "lines": [
+        { "s": "tanaka", "jp": "はじめまして。田中[たなか]です。", "r": "hajimemashite. tanaka desu.", "ca": "Encantat. Soc en Tanaka.", "es": "Encantado. Soy Tanaka.", "en": "Nice to meet you. I'm Tanaka." },
+        { "s": "you", "jp": "はじめまして。マルクです。よろしくお願[ねが]いします。", "r": "hajimemashite. maruku desu. yoroshiku onegaishimasu.", "ca": "Encantat. Soc en Marc. Molt de gust.", "es": "Encantado. Soy Marc. Mucho gusto.", "en": "Nice to meet you. I'm Marc. Pleased to meet you." },
+        { "s": "tanaka", "jp": "マルクさんですね。こちらこそ、よろしくお願[ねが]いします。", "r": "maruku-san desu ne. kochira koso, yoroshiku onegaishimasu.", "ca": "Marc, oi? El gust és meu.", "es": "Marc, ¿verdad? El gusto es mío.", "en": "Marc, right? The pleasure is mine." },
+        { "s": "tanaka", "jp": "日本[にほん]は初[はじ]めてですか。", "r": "nihon wa hajimete desu ka?", "ca": "És la primera vegada que vens al Japó?", "es": "¿Es la primera vez que vienes a Japón?", "en": "Is this your first time in Japan?" },
+        { "s": "you", "jp": "はい、初[はじ]めてです。", "r": "hai, hajimete desu.", "ca": "Sí, és la primera vegada.", "es": "Sí, es la primera vez.", "en": "Yes, it's my first time." }
+      ]
+    },
+    {
+      "id": "where-from",
+      "title": { "ca": "D'on ets", "es": "De dónde eres", "en": "Where you're from" },
+      "lines": [
+        { "s": "sato", "jp": "マルクさんは、どちらから来[き]ましたか。", "r": "maruku-san wa, dochira kara kimashita ka?", "ca": "Marc, d'on vens?", "es": "Marc, ¿de dónde vienes?", "en": "Where are you from, Marc?" },
+        { "s": "you", "jp": "スペインから来[き]ました。", "r": "supein kara kimashita.", "ca": "Vinc d'Espanya.", "es": "Vengo de España.", "en": "I'm from Spain." },
+        { "s": "sato", "jp": "スペインのどこですか。", "r": "supein no doko desu ka?", "ca": "De quina part d'Espanya?", "es": "¿De qué parte de España?", "en": "Where in Spain?" },
+        { "s": "you", "jp": "バルセロナです。", "r": "baruserona desu.", "ca": "De Barcelona.", "es": "De Barcelona.", "en": "Barcelona." },
+        { "s": "sato", "jp": "いいですね。バルセロナはサッカーで有名[ゆうめい]ですね。", "r": "ii desu ne. baruserona wa sakkaa de yuumei desu ne.", "ca": "Que bé! Barcelona és famosa pel futbol, oi?", "es": "¡Qué bien! Barcelona es famosa por el fútbol, ¿no?", "en": "How nice! Barcelona is famous for football, isn't it?" },
+        { "s": "you", "jp": "はい。サグラダ・ファミリアも有名[ゆうめい]です。", "r": "hai. sagurada famiria mo yuumei desu.", "ca": "Sí. La Sagrada Família també és famosa.", "es": "Sí. La Sagrada Familia también es famosa.", "en": "Yes. The Sagrada Família is famous too." }
+      ]
+    },
+    {
+      "id": "age",
+      "title": { "ca": "L'edat", "es": "La edad", "en": "Your age" },
+      "lines": [
+        { "s": "suzuki", "jp": "失礼[しつれい]ですが、おいくつですか。", "r": "shitsurei desu ga, oikutsu desu ka?", "ca": "Perdona la pregunta, quants anys tens?", "es": "Perdona la pregunta, ¿cuántos años tienes?", "en": "If you don't mind me asking, how old are you?" },
+        { "s": "you", "jp": "二十八歳[にじゅうはっさい]です。", "r": "nijuuhassai desu.", "ca": "Tinc vint-i-vuit anys.", "es": "Tengo veintiocho años.", "en": "I'm twenty-eight." },
+        { "s": "suzuki", "jp": "そうですか。私[わたし]も二十八歳[にじゅうはっさい]です。", "r": "sou desu ka. watashi mo nijuuhassai desu.", "ca": "Ah, sí? Jo també en tinc vint-i-vuit.", "es": "¿Ah, sí? Yo también tengo veintiocho.", "en": "Really? I'm twenty-eight too." },
+        { "s": "you", "jp": "本当[ほんとう]ですか。同[おな]じですね。", "r": "hontou desu ka? onaji desu ne.", "ca": "De debò? Tenim la mateixa edat!", "es": "¿De verdad? ¡Tenemos la misma edad!", "en": "Really? We're the same age!" }
+      ]
+    },
+    {
+      "id": "where-you-live",
+      "title": { "ca": "On vius", "es": "Dónde vives", "en": "Where you live" },
+      "lines": [
+        { "s": "tanaka", "jp": "マルクさんは、どこに住[す]んでいますか。", "r": "maruku-san wa, doko ni sunde imasu ka?", "ca": "Marc, on vius?", "es": "Marc, ¿dónde vives?", "en": "Where do you live, Marc?" },
+        { "s": "you", "jp": "バルセロナに住[す]んでいます。", "r": "baruserona ni sunde imasu.", "ca": "Visc a Barcelona.", "es": "Vivo en Barcelona.", "en": "I live in Barcelona." },
+        { "s": "tanaka", "jp": "日本[にほん]には旅行[りょこう]で来[き]ましたか。", "r": "nihon ni wa ryokou de kimashita ka?", "ca": "Has vingut al Japó de viatge?", "es": "¿Has venido a Japón de viaje?", "en": "Did you come to Japan on holiday?" },
+        { "s": "you", "jp": "はい、旅行[りょこう]です。二週間[にしゅうかん]日本[にほん]にいます。", "r": "hai, ryokou desu. nishuukan nihon ni imasu.", "ca": "Sí, de viatge. Em quedo dues setmanes al Japó.", "es": "Sí, de viaje. Me quedo dos semanas en Japón.", "en": "Yes, I'm travelling. I'm in Japan for two weeks." },
+        { "s": "tanaka", "jp": "東京[とうきょう]では、どこに泊[と]まっていますか。", "r": "toukyou de wa, doko ni tomatte imasu ka?", "ca": "I a Tòquio, on t'allotges?", "es": "Y en Tokio, ¿dónde te alojas?", "en": "Where are you staying in Tokyo?" },
+        { "s": "you", "jp": "新宿[しんじゅく]のホテルに泊[と]まっています。", "r": "shinjuku no hoteru ni tomatte imasu.", "ca": "M'allotjo en un hotel de Shinjuku.", "es": "Me alojo en un hotel de Shinjuku.", "en": "I'm staying at a hotel in Shinjuku." }
+      ]
+    },
+    {
+      "id": "job",
+      "title": { "ca": "La feina", "es": "El trabajo", "en": "Your job" },
+      "lines": [
+        { "s": "sato", "jp": "お仕事[しごと]は何[なん]ですか。", "r": "oshigoto wa nan desu ka?", "ca": "A què et dediques?", "es": "¿A qué te dedicas?", "en": "What do you do for a living?" },
+        { "s": "you", "jp": "エンジニアです。", "r": "enjinia desu.", "ca": "Soc enginyer.", "es": "Soy ingeniero.", "en": "I'm an engineer." },
+        { "s": "sato", "jp": "そうですか。どこで働[はたら]いていますか。", "r": "sou desu ka. doko de hataraite imasu ka?", "ca": "Ah, sí? On treballes?", "es": "¿Ah, sí? ¿Dónde trabajas?", "en": "Oh, really? Where do you work?" },
+        { "s": "you", "jp": "バルセロナの車[くるま]の会社[かいしゃ]で働[はたら]いています。佐藤[さとう]さんは？", "r": "baruserona no kuruma no kaisha de hataraite imasu. satou-san wa?", "ca": "Treballo en una empresa de cotxes de Barcelona. I tu, Sato?", "es": "Trabajo en una empresa de coches de Barcelona. ¿Y tú, Sato?", "en": "I work at a car company in Barcelona. What about you, Sato?" },
+        { "s": "sato", "jp": "私[わたし]は高校[こうこう]で英語[えいご]を教[おし]えています。", "r": "watashi wa koukou de eigo o oshiete imasu.", "ca": "Jo faig classes d'anglès en un institut.", "es": "Yo doy clases de inglés en un instituto.", "en": "I teach English at a high school." }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "jp": "はじめまして。〜です。",
+      "r": "hajimemashite. ~ desu.",
+      "ca": "Encantat. Soc ~.",
+      "es": "Encantado. Soy ~.",
+      "en": "Nice to meet you. I'm ~.",
+      "note": {
+        "ca": "La primera frase quan coneixes algú. Darrere de です hi va el teu nom, sense さん: mai no el dius per a tu mateix.",
+        "es": "La primera frase al conocer a alguien. Delante de です va tu nombre, sin さん: nunca se usa para uno mismo.",
+        "en": "The first thing you say when meeting someone. Put your name before です, without さん: never use it for yourself."
+      }
+    },
+    {
+      "jp": "よろしくお願[ねが]いします。",
+      "r": "yoroshiku onegaishimasu.",
+      "ca": "Molt de gust. / Encantat de conèixer-te.",
+      "es": "Mucho gusto. / Encantado de conocerte.",
+      "en": "Pleased to meet you.",
+      "note": {
+        "ca": "Tanca la presentació. Literalment, «et demano que em tractis bé». La resposta habitual és こちらこそ (el gust és meu).",
+        "es": "Cierra la presentación. Literalmente, «te pido que me trates bien». La respuesta habitual es こちらこそ (el gusto es mío).",
+        "en": "Closes a self-introduction. Literally \"please treat me kindly\". The usual reply is こちらこそ (likewise)."
+      }
+    },
+    {
+      "jp": "〜から来[き]ました。",
+      "r": "~ kara kimashita.",
+      "ca": "Vinc de ~.",
+      "es": "Vengo de ~.",
+      "en": "I'm from ~.",
+      "note": {
+        "ca": "Per dir d'on ets. Te la preguntaran amb どちらから来ましたか (d'on vens?).",
+        "es": "Para decir de dónde eres. Te lo preguntarán con どちらから来ましたか (¿de dónde vienes?).",
+        "en": "To say where you're from. You'll be asked どちらから来ましたか (where are you from?)."
+      }
+    },
+    {
+      "jp": "〜歳[さい]です。",
+      "r": "~ sai desu.",
+      "ca": "Tinc ~ anys.",
+      "es": "Tengo ~ años.",
+      "en": "I'm ~ years old.",
+      "note": {
+        "ca": "Compte amb les lectures: 二十八歳 es llegeix にじゅうはっさい, i 20 anys és はたち. Preguntar l'edat és delicat; la forma educada és おいくつですか.",
+        "es": "Ojo con las lecturas: 二十八歳 se lee にじゅうはっさい, y 20 años es はたち. Preguntar la edad es delicado; la forma educada es おいくつですか.",
+        "en": "Watch the readings: 二十八歳 is にじゅうはっさい, and 20 years old is はたち. Asking someone's age is delicate; the polite way is おいくつですか."
+      }
+    },
+    {
+      "jp": "〜に住[す]んでいます。",
+      "r": "~ ni sunde imasu.",
+      "ca": "Visc a ~.",
+      "es": "Vivo en ~.",
+      "en": "I live in ~.",
+      "note": {
+        "ca": "Amb 住む el lloc va amb に, no amb で. Es fa servir la forma 〜ています perquè és una situació que dura.",
+        "es": "Con 住む el lugar va con に, no con で. Se usa la forma 〜ています porque es una situación que dura.",
+        "en": "With 住む the place takes に, not で. The 〜ています form is used because it's an ongoing state."
+      }
+    },
+    {
+      "jp": "〜で働[はたら]いています。",
+      "r": "~ de hataraite imasu.",
+      "ca": "Treballo a ~.",
+      "es": "Trabajo en ~.",
+      "en": "I work at ~.",
+      "note": {
+        "ca": "Aquí el lloc va amb で (on passa l'acció). Per dir la professió n'hi ha prou amb 〜です: エンジニアです.",
+        "es": "Aquí el lugar va con で (donde ocurre la acción). Para decir la profesión basta con 〜です: エンジニアです.",
+        "en": "Here the place takes で (where the action happens). To state your profession, just use 〜です: エンジニアです."
+      }
+    }
+  ]
+}

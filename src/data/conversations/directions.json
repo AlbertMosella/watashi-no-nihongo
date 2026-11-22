@@ -1,0 +1,65 @@
+{
+  "speakers": {
+    "passerby": { "ca": "Vianant", "es": "Peatón", "en": "Passer-by" },
+    "staff": { "ca": "Empleat", "es": "Empleado", "en": "Staff member" },
+    "police": { "ca": "Policia", "es": "Policía", "en": "Police officer" }
+  },
+  "conversations": [
+    {
+      "id": "station",
+      "title": { "ca": "On és l'estació?", "es": "¿Dónde está la estación?", "en": "Where is the station?" },
+      "lines": [
+        { "s": "you", "jp": "すみません。浅草駅[あさくさえき]はどこですか。", "r": "sumimasen. asakusa eki wa doko desu ka?", "ca": "Perdoni. On és l'estació d'Asakusa?", "es": "Perdone. ¿Dónde está la estación de Asakusa?", "en": "Excuse me. Where is Asakusa Station?" },
+        { "s": "passerby", "jp": "浅草駅[あさくさえき]ですか。この道[みち]をまっすぐ行[い]ってください。", "r": "asakusa eki desu ka? kono michi o massugu itte kudasai.", "ca": "L'estació d'Asakusa? Vagi tot recte per aquest carrer.", "es": "¿La estación de Asakusa? Siga todo recto por esta calle.", "en": "Asakusa Station? Go straight along this street." },
+        { "s": "passerby", "jp": "二[ふた]つ目[め]の信号[しんごう]を右[みぎ]に曲[ま]がってください。", "r": "futatsume no shingou o migi ni magatte kudasai.", "ca": "Al segon semàfor, giri a la dreta.", "es": "En el segundo semáforo, gire a la derecha.", "en": "Turn right at the second traffic light." },
+        { "s": "you", "jp": "歩[ある]いて何分[なんぷん]ぐらいですか。", "r": "aruite nanpun gurai desu ka?", "ca": "Quants minuts hi ha a peu, més o menys?", "es": "¿Cuántos minutos son a pie, más o menos?", "en": "About how many minutes is it on foot?" },
+        { "s": "passerby", "jp": "五分[ごふん]ぐらいです。", "r": "gofun gurai desu.", "ca": "Uns cinc minuts.", "es": "Unos cinco minutos.", "en": "About five minutes." },
+        { "s": "you", "jp": "わかりました。ありがとうございます。", "r": "wakarimashita. arigatou gozaimasu.", "ca": "Entesos. Moltes gràcies.", "es": "Entendido. Muchas gracias.", "en": "Got it. Thank you very much." }
+      ]
+    },
+    {
+      "id": "toilet",
+      "title": { "ca": "On és el lavabo?", "es": "¿Dónde está el baño?", "en": "Where is the toilet?" },
+      "lines": [
+        { "s": "you", "jp": "すみません。トイレはどこですか。", "r": "sumimasen. toire wa doko desu ka?", "ca": "Perdoni. On és el lavabo?", "es": "Perdone. ¿Dónde está el baño?", "en": "Excuse me. Where is the toilet?" },
+        { "s": "staff", "jp": "まっすぐ行[い]って、あの角[かど]を左[ひだり]に曲[ま]がってください。エレベーターの横[よこ]にあります。", "r": "massugu itte, ano kado o hidari ni magatte kudasai. erebeetaa no yoko ni arimasu.", "ca": "Vagi tot recte i giri a l'esquerra en aquella cantonada. És al costat de l'ascensor.", "es": "Siga todo recto y gire a la izquierda en aquella esquina. Está al lado del ascensor.", "en": "Go straight and turn left at that corner. It's next to the lift." },
+        { "s": "you", "jp": "すみません、もう一度[いちど]お願[ねが]いします。", "r": "sumimasen, mou ichido onegai shimasu.", "ca": "Perdoni, m'ho pot repetir?", "es": "Perdone, ¿me lo puede repetir?", "en": "Sorry, could you say that again?" },
+        { "s": "staff", "jp": "まっすぐ行[い]って、左[ひだり]です。エレベーターの横[よこ]ですよ。", "r": "massugu itte, hidari desu. erebeetaa no yoko desu yo.", "ca": "Tot recte i a l'esquerra. Al costat de l'ascensor.", "es": "Todo recto y a la izquierda. Al lado del ascensor.", "en": "Straight ahead, then left. It's next to the lift." },
+        { "s": "you", "jp": "わかりました。ありがとうございます。", "r": "wakarimashita. arigatou gozaimasu.", "ca": "Entesos. Moltes gràcies.", "es": "Entendido. Muchas gracias.", "en": "Got it. Thank you very much." }
+      ]
+    },
+    {
+      "id": "lost",
+      "title": { "ca": "M'he perdut", "es": "Me he perdido", "en": "I'm lost" },
+      "lines": [
+        { "s": "you", "jp": "すみません。道[みち]に迷[まよ]いました。", "r": "sumimasen. michi ni mayoimashita.", "ca": "Perdoni. M'he perdut.", "es": "Perdone. Me he perdido.", "en": "Excuse me. I'm lost." },
+        { "s": "police", "jp": "どこに行[い]きたいですか。", "r": "doko ni ikitai desu ka?", "ca": "On vol anar?", "es": "¿Adónde quiere ir?", "en": "Where would you like to go?" },
+        { "s": "you", "jp": "このホテルに行[い]きたいです。", "r": "kono hoteru ni ikitai desu.", "ca": "Voldria anar a aquest hotel.", "es": "Quisiera ir a este hotel.", "en": "I'd like to go to this hotel." },
+        { "s": "police", "jp": "ああ、このホテルですね。ここから近[ちか]いですよ。歩[ある]いて三分[さんぷん]ぐらいです。", "r": "aa, kono hoteru desu ne. koko kara chikai desu yo. aruite sanpun gurai desu.", "ca": "Ah, aquest hotel. És a prop d'aquí: uns tres minuts a peu.", "es": "Ah, este hotel. Está cerca de aquí: unos tres minutos a pie.", "en": "Ah, this hotel. It's close to here, about three minutes on foot." },
+        { "s": "police", "jp": "あの角[かど]を右[みぎ]に曲[ま]がって、まっすぐ行[い]ってください。", "r": "ano kado o migi ni magatte, massugu itte kudasai.", "ca": "Giri a la dreta en aquella cantonada i continuï tot recte.", "es": "Gire a la derecha en aquella esquina y siga todo recto.", "en": "Turn right at that corner and keep going straight." },
+        { "s": "you", "jp": "あの角[かど]ですね。助[たす]かりました。ありがとうございます。", "r": "ano kado desu ne. tasukarimashita. arigatou gozaimasu.", "ca": "Aquella cantonada, oi? M'ha estat de gran ajuda. Moltes gràcies.", "es": "Esa esquina, ¿verdad? Me ha sido de gran ayuda. Muchas gracias.", "en": "That corner, right? That's a great help. Thank you very much." }
+      ]
+    },
+    {
+      "id": "convenience-store",
+      "title": { "ca": "Hi ha una botiga a prop?", "es": "¿Hay una tienda cerca?", "en": "Is there a shop nearby?" },
+      "lines": [
+        { "s": "you", "jp": "すみません。この近[ちか]くにコンビニはありますか。", "r": "sumimasen. kono chikaku ni konbini wa arimasu ka?", "ca": "Perdoni. Hi ha cap botiga de conveniència per aquí a prop?", "es": "Perdone. ¿Hay alguna tienda de conveniencia por aquí cerca?", "en": "Excuse me. Is there a convenience store near here?" },
+        { "s": "passerby", "jp": "コンビニですか。あの信号[しんごう]を渡[わた]って、左[ひだり]に曲[ま]がってください。", "r": "konbini desu ka? ano shingou o watatte, hidari ni magatte kudasai.", "ca": "Una botiga de conveniència? Creui en aquell semàfor i giri a l'esquerra.", "es": "¿Una tienda de conveniencia? Cruce en aquel semáforo y gire a la izquierda.", "en": "A convenience store? Cross at those lights and turn left." },
+        { "s": "passerby", "jp": "すぐ右側[みぎがわ]にありますよ。", "r": "sugu migigawa ni arimasu yo.", "ca": "La trobarà de seguida, a mà dreta.", "es": "Enseguida la verá, a la derecha.", "en": "It's right there on the right." },
+        { "s": "you", "jp": "遠[とお]いですか。", "r": "tooi desu ka?", "ca": "És lluny?", "es": "¿Está lejos?", "en": "Is it far?" },
+        { "s": "passerby", "jp": "いいえ、歩[ある]いて一分[いっぷん]ぐらいです。", "r": "iie, aruite ippun gurai desu.", "ca": "No, a un minut a peu, més o menys.", "es": "No, a un minuto a pie, más o menos.", "en": "No, it's about a minute's walk." },
+        { "s": "you", "jp": "ありがとうございます。", "r": "arigatou gozaimasu.", "ca": "Moltes gràcies.", "es": "Muchas gracias.", "en": "Thank you very much." }
+      ]
+    }
+  ],
+  "phrases": [
+    { "jp": "〜はどこですか。", "r": "~ wa doko desu ka?", "ca": "On és ~?", "es": "¿Dónde está ~?", "en": "Where is ~?", "note": { "ca": "Comença amb すみません per cridar l'atenció de manera educada.", "es": "Empieza con すみません para llamar la atención con educación.", "en": "Start with すみません to get someone's attention politely." } },
+    { "jp": "この近[ちか]くに〜はありますか。", "r": "kono chikaku ni ~ wa arimasu ka?", "ca": "Hi ha cap ~ per aquí a prop?", "es": "¿Hay algún ~ por aquí cerca?", "en": "Is there a ~ near here?", "note": { "ca": "あります és per a coses i llocs; per a persones i animals es fa servir います.", "es": "あります es para cosas y lugares; para personas y animales se usa います.", "en": "あります is for things and places; for people and animals use います." } },
+    { "jp": "まっすぐ行[い]ってください。", "r": "massugu itte kudasai.", "ca": "Vagi tot recte.", "es": "Siga todo recto.", "en": "Go straight ahead." },
+    { "jp": "〜を右[みぎ]に曲[ま]がってください。", "r": "~ o migi ni magatte kudasai.", "ca": "Giri a la dreta a ~.", "es": "Gire a la derecha en ~.", "en": "Turn right at ~.", "note": { "ca": "左[ひだり] és «esquerra». Llocs típics on girar: 角[かど] (cantonada) i 信号[しんごう] (semàfor).", "es": "左[ひだり] es «izquierda». Lugares típicos donde girar: 角[かど] (esquina) y 信号[しんごう] (semáforo).", "en": "左[ひだり] is \"left\". Typical places to turn: 角[かど] (corner) and 信号[しんごう] (traffic light)." } },
+    { "jp": "歩[ある]いて何分[なんぷん]ぐらいですか。", "r": "aruite nanpun gurai desu ka?", "ca": "Quants minuts hi ha a peu, més o menys?", "es": "¿Cuántos minutos son a pie, más o menos?", "en": "About how many minutes on foot?", "note": { "ca": "分 es llegeix ふん o ぷん segons el número: 一分[いっぷん], 三分[さんぷん], 五分[ごふん], 十分[じゅっぷん].", "es": "分 se lee ふん o ぷん según el número: 一分[いっぷん], 三分[さんぷん], 五分[ごふん], 十分[じゅっぷん].", "en": "分 is read ふん or ぷん depending on the number: 一分[いっぷん], 三分[さんぷん], 五分[ごふん], 十分[じゅっぷん]." } },
+    { "jp": "道[みち]に迷[まよ]いました。", "r": "michi ni mayoimashita.", "ca": "M'he perdut.", "es": "Me he perdido.", "en": "I'm lost.", "note": { "ca": "Si et perds, a les cabines de policia (交番[こうばん]) t'indiquen el camí.", "es": "Si te pierdes, en las garitas de policía (交番[こうばん]) te indican el camino.", "en": "If you get lost, the police boxes (交番[こうばん]) will give you directions." } },
+    { "jp": "もう一度[いちど]お願[ねが]いします。", "r": "mou ichido onegai shimasu.", "ca": "M'ho pot repetir, si us plau?", "es": "¿Me lo puede repetir, por favor?", "en": "Once more, please.", "note": { "ca": "Per demanar que parlin més a poc a poc: ゆっくりお願[ねが]いします.", "es": "Para pedir que hablen más despacio: ゆっくりお願[ねが]いします.", "en": "To ask them to speak more slowly: ゆっくりお願[ねが]いします." } }
+  ]
+}

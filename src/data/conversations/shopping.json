@@ -1,0 +1,65 @@
+{
+  "speakers": {
+    "clerk": { "ca": "Dependent", "es": "Dependiente", "en": "Shop assistant" }
+  },
+  "conversations": [
+    {
+      "id": "how-much",
+      "title": { "ca": "Quant val?", "es": "¿Cuánto cuesta?", "en": "How much is it?" },
+      "lines": [
+        { "s": "you", "jp": "すみません。これはいくらですか。", "r": "sumimasen. kore wa ikura desu ka?", "ca": "Perdoni. Quant val això?", "es": "Perdone. ¿Cuánto cuesta esto?", "en": "Excuse me. How much is this?" },
+        { "s": "clerk", "jp": "それは千二百円[せんにひゃくえん]です。", "r": "sore wa sen nihyaku en desu.", "ca": "Això val 1.200 iens.", "es": "Eso cuesta 1.200 yenes.", "en": "That's 1,200 yen." },
+        { "s": "you", "jp": "じゃあ、これを三[みっ]つください。", "r": "jaa, kore o mittsu kudasai.", "ca": "Doncs en vull tres, d'aquests.", "es": "Pues deme tres de estos.", "en": "Then I'll take three of these, please." },
+        { "s": "clerk", "jp": "ありがとうございます。三千六百円[さんぜんろっぴゃくえん]です。", "r": "arigatou gozaimasu. sanzen roppyaku en desu.", "ca": "Moltes gràcies. Són 3.600 iens.", "es": "Muchas gracias. Son 3.600 yenes.", "en": "Thank you very much. That's 3,600 yen." },
+        { "s": "clerk", "jp": "袋[ふくろ]はいりますか。", "r": "fukuro wa irimasu ka?", "ca": "Vol una bossa?", "es": "¿Quiere una bolsa?", "en": "Would you like a bag?" },
+        { "s": "you", "jp": "はい、お願[ねが]いします。", "r": "hai, onegai shimasu.", "ca": "Sí, si us plau.", "es": "Sí, por favor.", "en": "Yes, please." }
+      ]
+    },
+    {
+      "id": "trying-on",
+      "title": { "ca": "Emprovar-se roba", "es": "Probarse ropa", "en": "Trying clothes on" },
+      "lines": [
+        { "s": "you", "jp": "すみません。このシャツ、試着[しちゃく]してもいいですか。", "r": "sumimasen. kono shatsu, shichaku shite mo ii desu ka?", "ca": "Perdoni. Em puc emprovar aquesta camisa?", "es": "Perdone. ¿Puedo probarme esta camisa?", "en": "Excuse me. Can I try this shirt on?" },
+        { "s": "clerk", "jp": "はい、どうぞ。試着室[しちゃくしつ]はこちらです。", "r": "hai, douzo. shichakushitsu wa kochira desu.", "ca": "I tant. L'emprovador és per aquí.", "es": "Claro. El probador está por aquí.", "en": "Of course. The fitting room is this way." },
+        { "s": "you", "jp": "ちょっと小[ちい]さいです。もっと大[おお]きいサイズはありますか。", "r": "chotto chiisai desu. motto ookii saizu wa arimasu ka?", "ca": "Em va una mica petita. En té una talla més gran?", "es": "Me queda un poco pequeña. ¿Tiene una talla más grande?", "en": "It's a bit small. Do you have a bigger size?" },
+        { "s": "clerk", "jp": "Lサイズですね。少々[しょうしょう]お待[ま]ちください。", "r": "eru saizu desu ne. shoushou omachi kudasai.", "ca": "Una L, doncs. Un moment, si us plau.", "es": "Una L, entonces. Un momento, por favor.", "en": "A large, then. One moment, please." },
+        { "s": "you", "jp": "ほかの色[いろ]もありますか。", "r": "hoka no iro mo arimasu ka?", "ca": "La té també en altres colors?", "es": "¿La tiene también en otros colores?", "en": "Do you have it in other colours too?" },
+        { "s": "clerk", "jp": "はい、白[しろ]と黒[くろ]があります。", "r": "hai, shiro to kuro ga arimasu.", "ca": "Sí, la tenim en blanc i en negre.", "es": "Sí, la tenemos en blanco y en negro.", "en": "Yes, we have it in white and black." },
+        { "s": "you", "jp": "じゃあ、黒[くろ]にします。", "r": "jaa, kuro ni shimasu.", "ca": "Doncs me la quedo en negre.", "es": "Pues me la quedo en negro.", "en": "I'll go with black, then." }
+      ]
+    },
+    {
+      "id": "paying",
+      "title": { "ca": "A la caixa", "es": "En la caja", "en": "At the till" },
+      "lines": [
+        { "s": "clerk", "jp": "全部[ぜんぶ]で八千八百円[はっせんはっぴゃくえん]です。", "r": "zenbu de hassen happyaku en desu.", "ca": "En total són 8.800 iens.", "es": "En total son 8.800 yenes.", "en": "That's 8,800 yen altogether." },
+        { "s": "you", "jp": "免税[めんぜい]できますか。", "r": "menzei dekimasu ka?", "ca": "Ho puc comprar sense impostos?", "es": "¿Puedo comprarlo sin impuestos?", "en": "Can I get this tax-free?" },
+        { "s": "clerk", "jp": "はい、できます。パスポートをお願[ねが]いします。", "r": "hai, dekimasu. pasupooto o onegai shimasu.", "ca": "Sí, és clar. El passaport, si us plau.", "es": "Sí, claro. El pasaporte, por favor.", "en": "Yes, you can. Your passport, please." },
+        { "s": "you", "jp": "はい、どうぞ。カードで払[はら]えますか。", "r": "hai, douzo. kaado de haraemasu ka?", "ca": "Aquí el té. Puc pagar amb targeta?", "es": "Aquí tiene. ¿Puedo pagar con tarjeta?", "en": "Here you are. Can I pay by card?" },
+        { "s": "clerk", "jp": "はい、使[つか]えます。こちらにカードを入[い]れてください。", "r": "hai, tsukaemasu. kochira ni kaado o irete kudasai.", "ca": "Sí, s'hi pot pagar. Introdueixi la targeta aquí, si us plau.", "es": "Sí, se puede. Introduzca la tarjeta aquí, por favor.", "en": "Yes, you can. Please insert your card here." },
+        { "s": "you", "jp": "わかりました。", "r": "wakarimashita.", "ca": "D'acord.", "es": "De acuerdo.", "en": "OK." }
+      ]
+    },
+    {
+      "id": "just-looking",
+      "title": { "ca": "Només estic mirant", "es": "Solo estoy mirando", "en": "Just looking" },
+      "lines": [
+        { "s": "clerk", "jp": "いらっしゃいませ。何[なに]かお探[さが]しですか。", "r": "irasshaimase. nanika osagashi desu ka?", "ca": "Bon dia. Busca alguna cosa?", "es": "Buenos días. ¿Busca algo?", "en": "Hello. Are you looking for anything?" },
+        { "s": "you", "jp": "いいえ、見[み]ているだけです。", "r": "iie, mite iru dake desu.", "ca": "No, només estic mirant.", "es": "No, solo estoy mirando.", "en": "No, I'm just looking." },
+        { "s": "clerk", "jp": "どうぞ、ごゆっくり。", "r": "douzo, goyukkuri.", "ca": "Miri-s'ho amb calma.", "es": "Mire con calma.", "en": "Take your time." },
+        { "s": "you", "jp": "すみません。この靴[くつ]の二十七[にじゅうなな]センチはありますか。", "r": "sumimasen. kono kutsu no nijuunana senchi wa arimasu ka?", "ca": "Perdoni. Té aquestes sabates en 27 centímetres?", "es": "Perdone. ¿Tiene estos zapatos en 27 centímetros?", "en": "Excuse me. Do you have these shoes in 27 centimetres?" },
+        { "s": "clerk", "jp": "申[もう]し訳[わけ]ございません。そのサイズは今[いま]ありません。", "r": "moushiwake gozaimasen. sono saizu wa ima arimasen.", "ca": "Ho sento molt. Ara mateix no tenim aquesta talla.", "es": "Lo siento mucho. Ahora mismo no tenemos esa talla.", "en": "I'm very sorry. We don't have that size at the moment." },
+        { "s": "you", "jp": "そうですか。じゃあ、また来[き]ます。", "r": "sou desu ka. jaa, mata kimasu.", "ca": "D'acord. Doncs ja tornaré.", "es": "Vale. Pues ya volveré.", "en": "I see. I'll come back another time, then." }
+      ]
+    }
+  ],
+  "phrases": [
+    { "jp": "これはいくらですか。", "r": "kore wa ikura desu ka?", "ca": "Quant val això?", "es": "¿Cuánto cuesta esto?", "en": "How much is this?", "note": { "ca": "これ: a prop meu; それ: a prop teu; あれ: lluny de tots dos.", "es": "これ: cerca de mí; それ: cerca de ti; あれ: lejos de los dos.", "en": "これ: near me; それ: near you; あれ: far from both of us." } },
+    { "jp": "試着[しちゃく]してもいいですか。", "r": "shichaku shite mo ii desu ka?", "ca": "M'ho puc emprovar?", "es": "¿Me lo puedo probar?", "en": "Can I try it on?", "note": { "ca": "〜てもいいですか serveix per demanar permís per fer qualsevol cosa.", "es": "〜てもいいですか sirve para pedir permiso para hacer cualquier cosa.", "en": "〜てもいいですか is used to ask permission to do anything." } },
+    { "jp": "もっと大[おお]きいサイズはありますか。", "r": "motto ookii saizu wa arimasu ka?", "ca": "Té una talla més gran?", "es": "¿Tiene una talla más grande?", "en": "Do you have a bigger size?", "note": { "ca": "Per a una talla més petita: もっと小[ちい]さいサイズ.", "es": "Para una talla más pequeña: もっと小[ちい]さいサイズ.", "en": "For a smaller size: もっと小[ちい]さいサイズ." } },
+    { "jp": "ほかの色[いろ]はありますか。", "r": "hoka no iro wa arimasu ka?", "ca": "En té d'altres colors?", "es": "¿Lo tiene en otros colores?", "en": "Do you have other colours?", "note": { "ca": "Colors bàsics: 白[しろ] blanc, 黒[くろ] negre, 赤[あか] vermell, 青[あお] blau.", "es": "Colores básicos: 白[しろ] blanco, 黒[くろ] negro, 赤[あか] rojo, 青[あお] azul.", "en": "Basic colours: 白[しろ] white, 黒[くろ] black, 赤[あか] red, 青[あお] blue." } },
+    { "jp": "カードで払[はら]えますか。", "r": "kaado de haraemasu ka?", "ca": "Puc pagar amb targeta?", "es": "¿Puedo pagar con tarjeta?", "en": "Can I pay by card?", "note": { "ca": "En efectiu es diu 現金[げんきん]. Encara hi ha botigues petites que només accepten efectiu.", "es": "En efectivo se dice 現金[げんきん]. Aún hay tiendas pequeñas que solo aceptan efectivo.", "en": "Cash is 現金[げんきん]. Some small shops still only take cash." } },
+    { "jp": "免税[めんぜい]できますか。", "r": "menzei dekimasu ka?", "ca": "Ho puc comprar sense impostos?", "es": "¿Puedo comprarlo sin impuestos?", "en": "Can I get this tax-free?", "note": { "ca": "Només a les botigues amb el rètol «Tax-free» i cal portar el passaport.", "es": "Solo en las tiendas con el cartel «Tax-free» y hay que llevar el pasaporte.", "en": "Only in shops with a \"Tax-free\" sign, and you need your passport." } },
+    { "jp": "見[み]ているだけです。", "r": "mite iru dake desu.", "ca": "Només estic mirant.", "es": "Solo estoy mirando.", "en": "I'm just looking." }
+  ]
+}

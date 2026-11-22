@@ -1,0 +1,120 @@
+{
+  "speakers": {
+    "tanaka": { "ca": "Tanaka", "es": "Tanaka", "en": "Tanaka" },
+    "sato": { "ca": "Sato", "es": "Sato", "en": "Sato" },
+    "suzuki": { "ca": "Suzuki", "es": "Suzuki", "en": "Suzuki" }
+  },
+  "conversations": [
+    {
+      "id": "hobbies",
+      "title": { "ca": "Aficions", "es": "Aficiones", "en": "Hobbies" },
+      "lines": [
+        { "s": "suzuki", "jp": "マルクさんの趣味[しゅみ]は何[なん]ですか。", "r": "maruku-san no shumi wa nan desu ka?", "ca": "Marc, quines aficions tens?", "es": "Marc, ¿qué aficiones tienes?", "en": "Marc, what are your hobbies?" },
+        { "s": "you", "jp": "料理[りょうり]と写真[しゃしん]です。鈴木[すずき]さんは？", "r": "ryouri to shashin desu. suzuki-san wa?", "ca": "La cuina i la fotografia. I tu, Suzuki?", "es": "La cocina y la fotografía. ¿Y tú, Suzuki?", "en": "Cooking and photography. What about you, Suzuki?" },
+        { "s": "suzuki", "jp": "私[わたし]は山登[やまのぼ]りが好[す]きです。", "r": "watashi wa yamanobori ga suki desu.", "ca": "A mi m'agrada anar a la muntanya.", "es": "A mí me gusta ir a la montaña.", "en": "I like hiking in the mountains." },
+        { "s": "you", "jp": "いいですね。どこの山[やま]に登[のぼ]りますか。", "r": "ii desu ne. doko no yama ni noborimasu ka?", "ca": "Que bé! A quines muntanyes puges?", "es": "¡Qué bien! ¿A qué montañas subes?", "en": "Nice! Which mountains do you climb?" },
+        { "s": "suzuki", "jp": "よく高尾山[たかおさん]に行[い]きます。東京[とうきょう]から近[ちか]いですよ。", "r": "yoku takaosan ni ikimasu. toukyou kara chikai desu yo.", "ca": "Sovint vaig al mont Takao. És a prop de Tòquio.", "es": "Suelo ir al monte Takao. Está cerca de Tokio.", "en": "I often go to Mount Takao. It's close to Tokyo." },
+        { "s": "you", "jp": "私[わたし]も行[い]ってみたいです。", "r": "watashi mo itte mitai desu.", "ca": "Jo també hi vull anar.", "es": "Yo también quiero ir.", "en": "I'd like to go too." }
+      ]
+    },
+    {
+      "id": "weekend",
+      "title": { "ca": "El cap de setmana", "es": "El fin de semana", "en": "The weekend" },
+      "lines": [
+        { "s": "tanaka", "jp": "週末[しゅうまつ]は何[なに]をしましたか。", "r": "shuumatsu wa nani o shimashita ka?", "ca": "Què vas fer el cap de setmana?", "es": "¿Qué hiciste el fin de semana?", "en": "What did you do at the weekend?" },
+        { "s": "you", "jp": "京都[きょうと]に行[い]きました。お寺[てら]をたくさん見[み]ました。", "r": "kyouto ni ikimashita. otera o takusan mimashita.", "ca": "Vaig anar a Kyoto. Vaig veure molts temples.", "es": "Fui a Kioto. Vi muchos templos.", "en": "I went to Kyoto. I saw lots of temples." },
+        { "s": "tanaka", "jp": "いいですね。どうでしたか。", "r": "ii desu ne. dou deshita ka?", "ca": "Que bé! Què tal?", "es": "¡Qué bien! ¿Qué tal?", "en": "Nice! How was it?" },
+        { "s": "you", "jp": "とても楽[たの]しかったです。でも、人[ひと]が多[おお]かったです。", "r": "totemo tanoshikatta desu. demo, hito ga ookatta desu.", "ca": "M'ho vaig passar molt bé. Però hi havia molta gent.", "es": "Me lo pasé muy bien. Pero había mucha gente.", "en": "It was really fun. But it was very crowded." },
+        { "s": "tanaka", "jp": "秋[あき]の京都[きょうと]は人気[にんき]ですからね。", "r": "aki no kyouto wa ninki desu kara ne.", "ca": "És que Kyoto a la tardor és molt popular.", "es": "Es que Kioto en otoño es muy popular.", "en": "Well, Kyoto is very popular in autumn." },
+        { "s": "you", "jp": "田中[たなか]さんは？", "r": "tanaka-san wa?", "ca": "I tu, Tanaka?", "es": "¿Y tú, Tanaka?", "en": "What about you, Tanaka?" },
+        { "s": "tanaka", "jp": "私[わたし]は家[いえ]でゆっくりしました。", "r": "watashi wa ie de yukkuri shimashita.", "ca": "Jo vaig descansar a casa.", "es": "Yo descansé en casa.", "en": "I just relaxed at home." }
+      ]
+    },
+    {
+      "id": "weather",
+      "title": { "ca": "El temps", "es": "El tiempo", "en": "The weather" },
+      "lines": [
+        { "s": "sato", "jp": "今日[きょう]は寒[さむ]いですね。", "r": "kyou wa samui desu ne.", "ca": "Avui fa fred, eh?", "es": "Hoy hace frío, ¿eh?", "en": "It's cold today, isn't it?" },
+        { "s": "you", "jp": "そうですね。バルセロナより寒[さむ]いです。", "r": "sou desu ne. baruserona yori samui desu.", "ca": "Sí, oi? Fa més fred que a Barcelona.", "es": "Sí, ¿verdad? Hace más frío que en Barcelona.", "en": "It is. It's colder than Barcelona." },
+        { "s": "sato", "jp": "バルセロナの冬[ふゆ]は暖[あたた]かいですか。", "r": "baruserona no fuyu wa atatakai desu ka?", "ca": "A Barcelona els hiverns són suaus?", "es": "¿En Barcelona los inviernos son suaves?", "en": "Are winters mild in Barcelona?" },
+        { "s": "you", "jp": "はい、あまり寒[さむ]くないです。雪[ゆき]はほとんど降[ふ]りません。", "r": "hai, amari samukunai desu. yuki wa hotondo furimasen.", "ca": "Sí, no fa gaire fred. Gairebé mai no neva.", "es": "Sí, no hace mucho frío. Casi nunca nieva.", "en": "Yes, it's not very cold. It hardly ever snows." },
+        { "s": "sato", "jp": "明日[あした]は雨[あめ]が降[ふ]るそうですよ。", "r": "ashita wa ame ga furu sou desu yo.", "ca": "Diuen que demà plourà.", "es": "Dicen que mañana va a llover.", "en": "I hear it's going to rain tomorrow." },
+        { "s": "you", "jp": "本当[ほんとう]ですか。じゃあ、傘[かさ]を買[か]います。", "r": "hontou desu ka? jaa, kasa o kaimasu.", "ca": "De debò? Doncs em compraré un paraigua.", "es": "¿De verdad? Pues me compraré un paraguas.", "en": "Really? Then I'll buy an umbrella." }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "jp": "趣味[しゅみ]は〜です。",
+      "r": "shumi wa ~ desu.",
+      "ca": "La meva afició és ~.",
+      "es": "Mi afición es ~.",
+      "en": "My hobby is ~.",
+      "note": {
+        "ca": "Per preguntar-ho: 趣味は何ですか. Per enumerar-ne més d'una, uneix-les amb と: 料理と写真です.",
+        "es": "Para preguntarlo: 趣味は何ですか. Para enumerar más de una, únelas con と: 料理と写真です.",
+        "en": "To ask: 趣味は何ですか. To list more than one, join them with と: 料理と写真です."
+      }
+    },
+    {
+      "jp": "〜が好[す]きです。",
+      "r": "~ ga suki desu.",
+      "ca": "M'agrada ~.",
+      "es": "Me gusta ~.",
+      "en": "I like ~.",
+      "note": {
+        "ca": "La cosa que t'agrada va amb が, no amb を. Per a una acció, afegeix の: 写真を撮るのが好きです.",
+        "es": "Lo que te gusta va con が, no con を. Para una acción, añade の: 写真を撮るのが好きです.",
+        "en": "The thing you like takes が, not を. For an activity, add の: 写真を撮るのが好きです."
+      }
+    },
+    {
+      "jp": "週末[しゅうまつ]は何[なに]をしましたか。",
+      "r": "shuumatsu wa nani o shimashita ka?",
+      "ca": "Què vas fer el cap de setmana?",
+      "es": "¿Qué hiciste el fin de semana?",
+      "en": "What did you do at the weekend?",
+      "note": {
+        "ca": "Pregunta típica de dilluns. Respon en passat amb 〜ました: 京都に行きました.",
+        "es": "Pregunta típica de los lunes. Responde en pasado con 〜ました: 京都に行きました.",
+        "en": "A typical Monday question. Answer in the past with 〜ました: 京都に行きました."
+      }
+    },
+    {
+      "jp": "楽[たの]しかったです。",
+      "r": "tanoshikatta desu.",
+      "ca": "M'ho vaig passar bé. / Va ser divertit.",
+      "es": "Me lo pasé bien. / Fue divertido.",
+      "en": "It was fun.",
+      "note": {
+        "ca": "Passat dels adjectius en い: canvia い per かった (楽しい → 楽しかった). Excepció: いい → よかった.",
+        "es": "Pasado de los adjetivos en い: cambia い por かった (楽しい → 楽しかった). Excepción: いい → よかった.",
+        "en": "Past tense of い-adjectives: replace い with かった (楽しい → 楽しかった). Exception: いい → よかった."
+      }
+    },
+    {
+      "jp": "今日[きょう]は寒[さむ]いですね。",
+      "r": "kyou wa samui desu ne.",
+      "ca": "Avui fa fred, eh?",
+      "es": "Hoy hace frío, ¿eh?",
+      "en": "It's cold today, isn't it?",
+      "note": {
+        "ca": "El ね final busca complicitat; la resposta natural és そうですね. Altres opcions: 暑い (calor), いい天気 (bon temps).",
+        "es": "El ね final busca complicidad; la respuesta natural es そうですね. Otras opciones: 暑い (calor), いい天気 (buen tiempo).",
+        "en": "The final ね invites agreement; the natural reply is そうですね. Other options: 暑い (hot), いい天気 (nice weather)."
+      }
+    },
+    {
+      "jp": "〜そうです。",
+      "r": "~ sou desu.",
+      "ca": "Diuen que ~.",
+      "es": "Dicen que ~.",
+      "en": "I hear that ~.",
+      "note": {
+        "ca": "Darrere d'un verb en forma de diccionari, transmet una informació que has sentit: 雨が降るそうです.",
+        "es": "Detrás de un verbo en forma de diccionario, transmite una información que has oído: 雨が降るそうです.",
+        "en": "After a verb in dictionary form, it passes on something you've heard: 雨が降るそうです."
+      }
+    }
+  ]
+}

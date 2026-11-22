@@ -1,0 +1,54 @@
+{
+  "speakers": {
+    "receptionist": { "ca": "Recepcionista", "es": "Recepcionista", "en": "Receptionist" }
+  },
+  "conversations": [
+    {
+      "id": "check-in",
+      "title": { "ca": "Fer el check-in", "es": "Hacer el check-in", "en": "Checking in" },
+      "lines": [
+        { "s": "receptionist", "jp": "いらっしゃいませ。", "r": "irasshaimase.", "ca": "Benvingut.", "es": "Bienvenido.", "en": "Welcome." },
+        { "s": "you", "jp": "こんにちは。予約[よやく]しています。マルクです。", "r": "konnichiwa. yoyaku shite imasu. maruku desu.", "ca": "Bon dia. Tinc una reserva. Soc en Marc.", "es": "Buenas. Tengo una reserva. Soy Marc.", "en": "Hello. I have a reservation. My name is Marc." },
+        { "s": "receptionist", "jp": "マルク様[さま]ですね。少々[しょうしょう]お待[ま]ちください。", "r": "maruku-sama desu ne. shoushou omachi kudasai.", "ca": "Senyor Marc, oi? Un moment, si us plau.", "es": "Señor Marc, ¿verdad? Un momento, por favor.", "en": "Mr. Marc, right? One moment, please." },
+        { "s": "receptionist", "jp": "三泊[さんぱく]ですね。パスポートをお願[ねが]いします。", "r": "sanpaku desu ne. pasupooto o onegaishimasu.", "ca": "Són tres nits, oi? El passaport, si us plau.", "es": "Son tres noches, ¿verdad? El pasaporte, por favor.", "en": "Three nights, correct? Your passport, please." },
+        { "s": "you", "jp": "はい、どうぞ。", "r": "hai, douzo.", "ca": "Sí, aquí el té.", "es": "Sí, aquí tiene.", "en": "Yes, here you are." },
+        { "s": "receptionist", "jp": "ありがとうございます。お部屋[へや]は512号室[ごうしつ]です。こちらが鍵[かぎ]です。", "r": "arigatou gozaimasu. oheya wa go-ichi-ni goushitsu desu. kochira ga kagi desu.", "ca": "Gràcies. La seva habitació és la 512. Aquí té la clau.", "es": "Gracias. Su habitación es la 512. Aquí tiene la llave.", "en": "Thank you. Your room is 512. Here is your key." },
+        { "s": "you", "jp": "ありがとうございます。", "r": "arigatou gozaimasu.", "ca": "Moltes gràcies.", "es": "Muchas gracias.", "en": "Thank you very much." }
+      ]
+    },
+    {
+      "id": "breakfast-wifi",
+      "title": { "ca": "L'esmorzar i el wifi", "es": "El desayuno y el wifi", "en": "Breakfast and wifi" },
+      "lines": [
+        { "s": "you", "jp": "すみません、朝[あさ]ごはんは何時[なんじ]からですか。", "r": "sumimasen, asagohan wa nanji kara desu ka?", "ca": "Perdoni, a quina hora comença l'esmorzar?", "es": "Perdone, ¿a qué hora empieza el desayuno?", "en": "Excuse me, what time does breakfast start?" },
+        { "s": "receptionist", "jp": "朝食[ちょうしょく]は七時[しちじ]から十時[じゅうじ]までです。", "r": "choushoku wa shichiji kara juuji made desu.", "ca": "L'esmorzar és de set a deu.", "es": "El desayuno es de siete a diez.", "en": "Breakfast is from seven to ten." },
+        { "s": "receptionist", "jp": "一階[いっかい]のレストランでどうぞ。", "r": "ikkai no resutoran de douzo.", "ca": "Se serveix al restaurant de la planta baixa.", "es": "Se sirve en el restaurante de la planta baja.", "en": "Please come to the restaurant on the ground floor." },
+        { "s": "you", "jp": "わかりました。それから、ワイファイのパスワードは何[なん]ですか。", "r": "wakarimashita. sorekara, waifai no pasuwaado wa nan desu ka?", "ca": "D'acord. I quina és la contrasenya del wifi?", "es": "De acuerdo. Y, ¿cuál es la contraseña del wifi?", "en": "I see. And what's the wifi password?" },
+        { "s": "receptionist", "jp": "このカードに書[か]いてあります。", "r": "kono kaado ni kaite arimasu.", "ca": "La té escrita en aquesta targeta.", "es": "La tiene escrita en esta tarjeta.", "en": "It's written on this card." },
+        { "s": "you", "jp": "ありがとうございます。", "r": "arigatou gozaimasu.", "ca": "Moltes gràcies.", "es": "Muchas gracias.", "en": "Thank you very much." }
+      ]
+    },
+    {
+      "id": "check-out-luggage",
+      "title": { "ca": "Fer el check-out i deixar les maletes", "es": "Hacer el check-out y dejar las maletas", "en": "Checking out and leaving luggage" },
+      "lines": [
+        { "s": "you", "jp": "チェックアウトをお願[ねが]いします。", "r": "chekkuauto o onegaishimasu.", "ca": "Voldria fer el check-out, si us plau.", "es": "Quisiera hacer el check-out, por favor.", "en": "I'd like to check out, please." },
+        { "s": "receptionist", "jp": "かしこまりました。鍵[かぎ]をお願[ねが]いします。", "r": "kashikomarimashita. kagi o onegaishimasu.", "ca": "Molt bé. La clau, si us plau.", "es": "Muy bien. La llave, por favor.", "en": "Certainly. Your key, please." },
+        { "s": "you", "jp": "はい。それから、荷物[にもつ]を預[あず]かってもらえますか。", "r": "hai. sorekara, nimotsu o azukatte moraemasu ka?", "ca": "Aquí la té. I em podrien guardar l'equipatge?", "es": "Aquí tiene. ¿Y me podrían guardar el equipaje?", "en": "Here. Also, could you keep my luggage for me?" },
+        { "s": "receptionist", "jp": "はい。何時[なんじ]ごろお戻[もど]りですか。", "r": "hai. nanji goro omodori desu ka?", "ca": "És clar. Cap a quina hora tornarà?", "es": "Claro. ¿Sobre qué hora volverá?", "en": "Of course. Around what time will you be back?" },
+        { "s": "you", "jp": "三時[さんじ]ごろです。", "r": "sanji goro desu.", "ca": "Cap a les tres.", "es": "Sobre las tres.", "en": "Around three." },
+        { "s": "receptionist", "jp": "かしこまりました。こちらが番号札[ばんごうふだ]です。", "r": "kashikomarimashita. kochira ga bangoufuda desu.", "ca": "Entesos. Aquí té el resguard amb el número.", "es": "Entendido. Aquí tiene el resguardo con el número.", "en": "Certainly. Here is your claim tag." },
+        { "s": "you", "jp": "ありがとうございます。助[たす]かります。", "r": "arigatou gozaimasu. tasukarimasu.", "ca": "Gràcies, m'ajuda molt.", "es": "Gracias, me viene muy bien.", "en": "Thank you, that's a big help." }
+      ]
+    }
+  ],
+  "phrases": [
+    { "jp": "予約[よやく]しています。", "r": "yoyaku shite imasu.", "ca": "Tinc una reserva.", "es": "Tengo una reserva.", "en": "I have a reservation.", "note": { "ca": "Literalment «he reservat». Després digues el teu nom: 〜です。", "es": "Literalmente «he reservado». Después di tu nombre: 〜です。", "en": "Literally \"I have reserved\". Then say your name: 〜です。" } },
+    { "jp": "〜をお願[ねが]いします。", "r": "~ o onegaishimasu.", "ca": "~, si us plau.", "es": "~, por favor.", "en": "~, please.", "note": { "ca": "Serveix per demanar un servei: チェックイン、チェックアウト…", "es": "Sirve para pedir un servicio: チェックイン、チェックアウト…", "en": "Use it to request a service: チェックイン、チェックアウト…" } },
+    { "jp": "〜は何時[なんじ]からですか。", "r": "~ wa nanji kara desu ka?", "ca": "A quina hora comença ~?", "es": "¿A qué hora empieza ~?", "en": "What time does ~ start?", "note": { "ca": "から = des de; まで = fins a: 七時から十時まで (de set a deu).", "es": "から = desde; まで = hasta: 七時から十時まで (de siete a diez).", "en": "から = from; まで = until: 七時から十時まで (from seven to ten)." } },
+    { "jp": "〜は何[なん]ですか。", "r": "~ wa nan desu ka?", "ca": "Quin/Què és ~?", "es": "¿Cuál/Qué es ~?", "en": "What is ~?", "note": { "ca": "Per preguntar una dada, com la contrasenya del wifi.", "es": "Para preguntar un dato, como la contraseña del wifi.", "en": "To ask for a piece of information, like the wifi password." } },
+    { "jp": "〜てもらえますか。", "r": "~ te moraemasu ka?", "ca": "Em podria ~?", "es": "¿Me podría ~?", "en": "Could you ~ for me?", "note": { "ca": "Petició educada amb la forma en -te del verb: 預かる → 預かって → 預かってもらえますか.", "es": "Petición educada con la forma en -te del verbo: 預かる → 預かって → 預かってもらえますか.", "en": "A polite request using the verb's -te form: 預かる → 預かって → 預かってもらえますか." } },
+    { "jp": "荷物[にもつ]を預[あず]かってもらえますか。", "r": "nimotsu o azukatte moraemasu ka?", "ca": "Em podrien guardar l'equipatge?", "es": "¿Me podrían guardar el equipaje?", "en": "Could you keep my luggage for me?", "note": { "ca": "Molt útil el dia del check-out, si el tren surt més tard.", "es": "Muy útil el día del check-out, si el tren sale más tarde.", "en": "Very handy on check-out day if your train leaves later." } },
+    { "jp": "少々[しょうしょう]お待[ま]ちください。", "r": "shoushou omachi kudasai.", "ca": "Un moment, si us plau.", "es": "Un momento, por favor.", "en": "One moment, please.", "note": { "ca": "Fórmula molt formal que sentiràs sovint del personal.", "es": "Fórmula muy formal que oirás a menudo del personal.", "en": "A very formal set phrase you'll often hear from staff." } }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "speakers": {
+    "staff": { "ca": "Cambrer", "es": "Camarero", "en": "Waiter" }
+  },
+  "conversations": [
+    {
+      "id": "entering",
+      "title": { "ca": "Entrar al restaurant", "es": "Entrar en el restaurante", "en": "Entering the restaurant" },
+      "lines": [
+        { "s": "staff", "jp": "いらっしゃいませ。何名様[なんめいさま]ですか。", "r": "irasshaimase. nanmei-sama desu ka?", "ca": "Benvinguts. Quantes persones són?", "es": "Bienvenidos. ¿Cuántas personas son?", "en": "Welcome. How many people?" },
+        { "s": "you", "jp": "二人[ふたり]です。", "r": "futari desu.", "ca": "Som dues persones.", "es": "Somos dos.", "en": "Two people." },
+        { "s": "staff", "jp": "ご予約[よやく]はされていますか。", "r": "goyoyaku wa sarete imasu ka?", "ca": "Tenen reserva?", "es": "¿Tienen reserva?", "en": "Do you have a reservation?" },
+        { "s": "you", "jp": "いいえ、していません。", "r": "iie, shite imasen.", "ca": "No, no en tenim.", "es": "No, no tenemos.", "en": "No, we don't." },
+        { "s": "staff", "jp": "かしこまりました。こちらへどうぞ。", "r": "kashikomarimashita. kochira e douzo.", "ca": "D'acord. Per aquí, si us plau.", "es": "De acuerdo. Por aquí, por favor.", "en": "Certainly. This way, please." },
+        { "s": "you", "jp": "ありがとうございます。", "r": "arigatou gozaimasu.", "ca": "Moltes gràcies.", "es": "Muchas gracias.", "en": "Thank you." }
+      ]
+    },
+    {
+      "id": "ordering-food",
+      "title": { "ca": "Demanar el menjar", "es": "Pedir la comida", "en": "Ordering food" },
+      "lines": [
+        { "s": "you", "jp": "すみません、メニューをお願[ねが]いします。", "r": "sumimasen, menyuu o onegai shimasu.", "ca": "Perdoni, ens porta la carta, si us plau?", "es": "Perdone, ¿nos trae la carta, por favor?", "en": "Excuse me, could we have the menu, please?" },
+        { "s": "staff", "jp": "はい、どうぞ。", "r": "hai, douzo.", "ca": "Sí, aquí la té.", "es": "Sí, aquí tiene.", "en": "Yes, here you are." },
+        { "s": "you", "jp": "おすすめは何[なん]ですか。", "r": "osusume wa nan desu ka?", "ca": "Què ens recomana?", "es": "¿Qué nos recomienda?", "en": "What do you recommend?" },
+        { "s": "staff", "jp": "天[てん]ぷら定食[ていしょく]がおすすめです。", "r": "tenpura teishoku ga osusume desu.", "ca": "Li recomano el menú de tempura.", "es": "Le recomiendo el menú de tempura.", "en": "I recommend the tempura set meal." },
+        { "s": "you", "jp": "じゃあ、天[てん]ぷら定食[ていしょく]を一[ひと]つと、カレーうどんを一[ひと]つお願[ねが]いします。", "r": "jaa, tenpura teishoku o hitotsu to, karee udon o hitotsu onegai shimasu.", "ca": "Doncs un menú de tempura i uns udon amb curri, si us plau.", "es": "Entonces, un menú de tempura y unos udon con curry, por favor.", "en": "Then one tempura set meal and one curry udon, please." },
+        { "s": "staff", "jp": "かしこまりました。天[てん]ぷら定食[ていしょく]がお一[ひと]つ、カレーうどんがお一[ひと]つですね。", "r": "kashikomarimashita. tenpura teishoku ga ohitotsu, karee udon ga ohitotsu desu ne.", "ca": "Molt bé. Un menú de tempura i uns udon amb curri, oi?", "es": "Muy bien. Un menú de tempura y unos udon con curry, ¿verdad?", "en": "Certainly. One tempura set meal and one curry udon, right?" },
+        { "s": "you", "jp": "はい、そうです。", "r": "hai, sou desu.", "ca": "Sí, exacte.", "es": "Sí, eso es.", "en": "Yes, that's right." }
+      ]
+    },
+    {
+      "id": "ordering-drinks",
+      "title": { "ca": "Demanar les begudes", "es": "Pedir las bebidas", "en": "Ordering drinks" },
+      "lines": [
+        { "s": "staff", "jp": "お飲[の]み物[もの]は何[なに]になさいますか。", "r": "onomimono wa nani ni nasaimasu ka?", "ca": "Què volen per beure?", "es": "¿Qué van a tomar de beber?", "en": "What would you like to drink?" },
+        { "s": "you", "jp": "生[なま]ビールを二[ふた]つお願[ねが]いします。", "r": "nama biiru o futatsu onegai shimasu.", "ca": "Dues canyes, si us plau.", "es": "Dos cañas, por favor.", "en": "Two draft beers, please." },
+        { "s": "staff", "jp": "かしこまりました。", "r": "kashikomarimashita.", "ca": "Molt bé.", "es": "Muy bien.", "en": "Certainly." },
+        { "s": "you", "jp": "すみません、日本酒[にほんしゅ]を二杯[にはい]お願[ねが]いします。", "r": "sumimasen, nihonshu o nihai onegai shimasu.", "ca": "Perdoni, dos gots de sake, si us plau.", "es": "Perdone, dos vasos de sake, por favor.", "en": "Excuse me, two glasses of sake, please." },
+        { "s": "staff", "jp": "冷[つめ]たいのと温[あたた]かいの、どちらがいいですか。", "r": "tsumetai no to atatakai no, dochira ga ii desu ka?", "ca": "El volen fred o calent?", "es": "¿Lo quieren frío o caliente?", "en": "Would you like it cold or hot?" },
+        { "s": "you", "jp": "冷[つめ]たいのをお願[ねが]いします。", "r": "tsumetai no o onegai shimasu.", "ca": "Fred, si us plau.", "es": "Frío, por favor.", "en": "Cold, please." },
+        { "s": "staff", "jp": "かしこまりました。少々[しょうしょう]お待[ま]ちください。", "r": "kashikomarimashita. shoushou omachi kudasai.", "ca": "Molt bé. Un moment, si us plau.", "es": "Muy bien. Un momento, por favor.", "en": "Certainly. Just a moment, please." }
+      ]
+    },
+    {
+      "id": "allergies",
+      "title": { "ca": "Al·lèrgies i coses que no menges", "es": "Alergias y cosas que no comes", "en": "Allergies and things you don't eat" },
+      "lines": [
+        { "s": "you", "jp": "すみません、えびアレルギーがあります。", "r": "sumimasen, ebi arerugii ga arimasu.", "ca": "Perdoni, tinc al·lèrgia a les gambes.", "es": "Perdone, tengo alergia a las gambas.", "en": "Excuse me, I'm allergic to shrimp." },
+        { "s": "staff", "jp": "この天[てん]ぷらにはえびが入[はい]っています。", "r": "kono tenpura ni wa ebi ga haitte imasu.", "ca": "Aquesta tempura porta gambes.", "es": "Esta tempura lleva gambas.", "en": "This tempura has shrimp in it." },
+        { "s": "you", "jp": "じゃあ、えびなしでできますか。", "r": "jaa, ebi nashi de dekimasu ka?", "ca": "Doncs me la poden fer sense gambes?", "es": "Entonces, ¿me la pueden hacer sin gambas?", "en": "Then could you make it without shrimp?" },
+        { "s": "staff", "jp": "はい、できます。", "r": "hai, dekimasu.", "ca": "Sí, és clar.", "es": "Sí, claro.", "en": "Yes, we can." },
+        { "s": "you", "jp": "それから、ライアは肉[にく]が食[た]べられません。", "r": "sore kara, raia wa niku ga taberaremasen.", "ca": "I la Laia no menja carn.", "es": "Y Laia no come carne.", "en": "Also, Laia doesn't eat meat." },
+        { "s": "staff", "jp": "野菜[やさい]の料理[りょうり]はこちらです。", "r": "yasai no ryouri wa kochira desu.", "ca": "Els plats de verdura són aquests.", "es": "Los platos de verdura son estos.", "en": "These are the vegetable dishes." },
+        { "s": "you", "jp": "ありがとうございます。", "r": "arigatou gozaimasu.", "ca": "Moltes gràcies.", "es": "Muchas gracias.", "en": "Thank you." }
+      ]
+    },
+    {
+      "id": "more-please",
+      "title": { "ca": "Ració gran i repetir", "es": "Ración grande y repetir", "en": "Large portions and refills" },
+      "lines": [
+        { "s": "you", "jp": "すみません、ご飯[はん]は大盛[おおも]りにできますか。", "r": "sumimasen, gohan wa oomori ni dekimasu ka?", "ca": "Perdoni, l'arròs pot ser una ració gran?", "es": "Perdone, ¿el arroz puede ser una ración grande?", "en": "Excuse me, can I get a large portion of rice?" },
+        { "s": "staff", "jp": "はい、大盛[おおも]りは無料[むりょう]です。", "r": "hai, oomori wa muryou desu.", "ca": "Sí, la ració gran és gratuïta.", "es": "Sí, la ración grande es gratis.", "en": "Yes, a large portion is free." },
+        { "s": "you", "jp": "じゃあ、大盛[おおも]りでお願[ねが]いします。", "r": "jaa, oomori de onegai shimasu.", "ca": "Doncs gran, si us plau.", "es": "Entonces, grande, por favor.", "en": "Then a large one, please." },
+        { "s": "staff", "jp": "かしこまりました。", "r": "kashikomarimashita.", "ca": "Molt bé.", "es": "Muy bien.", "en": "Certainly." },
+        { "s": "you", "jp": "すみません、ご飯[はん]のおかわりをお願[ねが]いします。それと、ビールをもう一本[いっぽん]ください。", "r": "sumimasen, gohan no okawari o onegai shimasu. sore to, biiru o mou ippon kudasai.", "ca": "Perdoni, voldria repetir d'arròs. I una altra ampolla de cervesa, si us plau.", "es": "Perdone, quería repetir de arroz. Y otra botella de cerveza, por favor.", "en": "Excuse me, could I have a refill of rice? And another bottle of beer, please." },
+        { "s": "staff", "jp": "はい、少々[しょうしょう]お待[ま]ちください。", "r": "hai, shoushou omachi kudasai.", "ca": "Sí, un moment, si us plau.", "es": "Sí, un momento, por favor.", "en": "Sure, just a moment, please." }
+      ]
+    },
+    {
+      "id": "paying",
+      "title": { "ca": "Pagar i donar les gràcies", "es": "Pagar y dar las gracias", "en": "Paying and saying thanks" },
+      "lines": [
+        { "s": "you", "jp": "すみません、お会計[かいけい]お願[ねが]いします。", "r": "sumimasen, okaikei onegai shimasu.", "ca": "Perdoni, el compte, si us plau.", "es": "Perdone, la cuenta, por favor.", "en": "Excuse me, the bill, please." },
+        { "s": "staff", "jp": "はい、レジでお願[ねが]いします。", "r": "hai, reji de onegai shimasu.", "ca": "Sí, es paga a la caixa.", "es": "Sí, se paga en la caja.", "en": "Sure, please pay at the register." },
+        { "s": "staff", "jp": "四千八百円[よんせんはっぴゃくえん]になります。", "r": "yonsen happyaku-en ni narimasu.", "ca": "Són 4.800 iens.", "es": "Son 4.800 yenes.", "en": "That will be 4,800 yen." },
+        { "s": "you", "jp": "カードで払[はら]えますか。", "r": "kaado de haraemasu ka?", "ca": "Puc pagar amb targeta?", "es": "¿Puedo pagar con tarjeta?", "en": "Can I pay by card?" },
+        { "s": "staff", "jp": "はい、大丈夫[だいじょうぶ]です。", "r": "hai, daijoubu desu.", "ca": "Sí, cap problema.", "es": "Sí, sin problema.", "en": "Yes, that's fine." },
+        { "s": "you", "jp": "ごちそうさまでした。", "r": "gochisousama deshita.", "ca": "Estava boníssim, gràcies.", "es": "Estaba buenísimo, gracias.", "en": "Thank you for the meal." },
+        { "s": "staff", "jp": "ありがとうございました。またお越[こ]しください。", "r": "arigatou gozaimashita. mata okoshi kudasai.", "ca": "Moltes gràcies. Tornin aviat.", "es": "Muchas gracias. Vuelvan pronto.", "en": "Thank you very much. Please come again." }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "jp": "二人[ふたり]です。", "r": "futari desu.", "ca": "Som dues persones.", "es": "Somos dos.", "en": "Two people.",
+      "note": {
+        "ca": "Comptadors: per a persones es diu 一人 (hitori), 二人 (futari), 三人 (sannin)... El personal pregunta 何名様ですか amb el comptador formal 名 (mei), però tu respons amb 〜人. Per a coses s'usa el comptador genèric 〜つ (ひとつ, ふたつ, みっつ) o un d'específic: 杯 (はい) per a gots i tasses (いっぱい, にはい, さんばい) i 本 (ほん) per a ampolles (いっぽん, にほん, さんぼん).",
+        "es": "Contadores: para personas se dice 一人 (hitori), 二人 (futari), 三人 (sannin)... El personal pregunta 何名様ですか con el contador formal 名 (mei), pero tú respondes con 〜人. Para cosas se usa el contador genérico 〜つ (ひとつ, ふたつ, みっつ) o uno específico: 杯 (はい) para vasos y tazas (いっぱい, にはい, さんばい) y 本 (ほん) para botellas (いっぽん, にほん, さんぼん).",
+        "en": "Counters: for people you say 一人 (hitori), 二人 (futari), 三人 (sannin)... Staff ask 何名様ですか with the formal counter 名 (mei), but you answer with 〜人. For things use the generic counter 〜つ (ひとつ, ふたつ, みっつ) or a specific one: 杯 (hai) for glasses and cups (いっぱい, にはい, さんばい) and 本 (hon) for bottles (いっぽん, にほん, さんぼん)."
+      }
+    },
+    {
+      "jp": "〜をください。", "r": "~ o kudasai.", "ca": "Em dona ~, si us plau.", "es": "Me da ~, por favor.", "en": "~, please.",
+      "note": {
+        "ca": "La quantitat va després de を: ビールを二つください.",
+        "es": "La cantidad va después de を: ビールを二つください.",
+        "en": "The quantity goes after を: ビールを二つください."
+      }
+    },
+    {
+      "jp": "〜をお願[ねが]いします。", "r": "~ o onegai shimasu.", "ca": "~, si us plau.", "es": "~, por favor.", "en": "~, please.",
+      "note": {
+        "ca": "Una mica més educat que 〜をください. Serveix per demanar gairebé qualsevol cosa.",
+        "es": "Algo más educado que 〜をください. Sirve para pedir casi cualquier cosa.",
+        "en": "Slightly more polite than 〜をください. Works for asking for almost anything."
+      }
+    },
+    {
+      "jp": "おすすめは何[なん]ですか。", "r": "osusume wa nan desu ka?", "ca": "Què em recomana?", "es": "¿Qué me recomienda?", "en": "What do you recommend?"
+    },
+    {
+      "jp": "〜はありますか。", "r": "~ wa arimasu ka?", "ca": "Tenen ~?", "es": "¿Tienen ~?", "en": "Do you have ~?",
+      "note": {
+        "ca": "Per exemple: 英語のメニューはありますか (Tenen la carta en anglès?).",
+        "es": "Por ejemplo: 英語のメニューはありますか (¿Tienen la carta en inglés?).",
+        "en": "For example: 英語のメニューはありますか (Do you have an English menu?)."
+      }
+    },
+    {
+      "jp": "〜が食[た]べられません。", "r": "~ ga taberaremasen.", "ca": "No puc menjar ~.", "es": "No puedo comer ~.", "en": "I can't eat ~.",
+      "note": {
+        "ca": "Per a una al·lèrgia també es diu 〜アレルギーがあります (Tinc al·lèrgia a ~).",
+        "es": "Para una alergia también se dice 〜アレルギーがあります (Tengo alergia a ~).",
+        "en": "For an allergy you can also say 〜アレルギーがあります (I'm allergic to ~)."
+      }
+    },
+    {
+      "jp": "お会計[かいけい]お願[ねが]いします。", "r": "okaikei onegai shimasu.", "ca": "El compte, si us plau.", "es": "La cuenta, por favor.", "en": "The bill, please.",
+      "note": {
+        "ca": "Sovint es paga a la caixa (レジ) en sortir. Al Japó no es deixa propina.",
+        "es": "A menudo se paga en la caja (レジ) al salir. En Japón no se deja propina.",
+        "en": "You often pay at the register (レジ) on the way out. Tipping is not done in Japan."
+      }
+    },
+    {
+      "jp": "ごちそうさまでした。", "r": "gochisousama deshita.", "ca": "Gràcies pel menjar.", "es": "Gracias por la comida.", "en": "Thank you for the meal.",
+      "note": {
+        "ca": "Es diu en acabar o en sortir del restaurant. Abans de menjar es diu いただきます.",
+        "es": "Se dice al terminar o al salir del restaurante. Antes de comer se dice いただきます.",
+        "en": "Said when you finish eating or leave the restaurant. Before eating you say いただきます."
+      }
+    }
+  ]
+}

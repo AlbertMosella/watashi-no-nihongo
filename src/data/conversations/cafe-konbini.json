@@ -1,0 +1,100 @@
+{
+  "speakers": {
+    "staff": { "ca": "Dependent", "es": "Dependiente", "en": "Staff" },
+    "clerk": { "ca": "Caixer", "es": "Cajero", "en": "Cashier" }
+  },
+  "conversations": [
+    {
+      "id": "cafe-take-away",
+      "title": { "ca": "Un cafè per emportar", "es": "Un café para llevar", "en": "Coffee to go" },
+      "lines": [
+        { "s": "staff", "jp": "いらっしゃいませ。ご注文[ちゅうもん]はお決[き]まりですか。", "r": "irasshaimase. gochuumon wa okimari desu ka?", "ca": "Bon dia. Què li poso?", "es": "Buenos días. ¿Qué le pongo?", "en": "Hello. Are you ready to order?" },
+        { "s": "you", "jp": "ホットコーヒーを二[ふた]つお願[ねが]いします。", "r": "hotto koohii o futatsu onegai shimasu.", "ca": "Dos cafès calents, si us plau.", "es": "Dos cafés calientes, por favor.", "en": "Two hot coffees, please." },
+        { "s": "staff", "jp": "サイズはいかがなさいますか。", "r": "saizu wa ikaga nasaimasu ka?", "ca": "De quina mida els vol?", "es": "¿De qué tamaño los quiere?", "en": "What size would you like?" },
+        { "s": "you", "jp": "エムサイズでお願[ねが]いします。", "r": "emu saizu de onegai shimasu.", "ca": "Mitjans, si us plau.", "es": "Medianos, por favor.", "en": "Medium, please." },
+        { "s": "staff", "jp": "店内[てんない]でお召[め]し上[あ]がりですか、お持[も]ち帰[かえ]りですか。", "r": "tennai de omeshiagari desu ka, omochikaeri desu ka?", "ca": "Per prendre aquí o per emportar?", "es": "¿Para tomar aquí o para llevar?", "en": "For here or to go?" },
+        { "s": "you", "jp": "持[も]ち帰[かえ]りでお願[ねが]いします。", "r": "mochikaeri de onegai shimasu.", "ca": "Per emportar, si us plau.", "es": "Para llevar, por favor.", "en": "To go, please." },
+        { "s": "staff", "jp": "かしこまりました。八百円[はっぴゃくえん]です。", "r": "kashikomarimashita. happyaku-en desu.", "ca": "Molt bé. Són 800 iens.", "es": "Muy bien. Son 800 yenes.", "en": "Certainly. That's 800 yen." }
+      ]
+    },
+    {
+      "id": "cafe-eat-in",
+      "title": { "ca": "Berenar a la cafeteria", "es": "Merendar en la cafetería", "en": "Eating in at a café" },
+      "lines": [
+        { "s": "you", "jp": "すみません、このケーキとカフェラテを一[ひと]つずつお願[ねが]いします。", "r": "sumimasen, kono keeki to kafe rate o hitotsu zutsu onegai shimasu.", "ca": "Perdoni, un d'aquest pastís i un cafè amb llet, si us plau.", "es": "Perdone, uno de esta tarta y un café con leche, por favor.", "en": "Excuse me, one of this cake and one café latte, please." },
+        { "s": "staff", "jp": "店内[てんない]でお召[め]し上[あ]がりですか。", "r": "tennai de omeshiagari desu ka?", "ca": "És per prendre aquí?", "es": "¿Es para tomar aquí?", "en": "Is that for here?" },
+        { "s": "you", "jp": "はい、店内[てんない]で。", "r": "hai, tennai de.", "ca": "Sí, per prendre aquí.", "es": "Sí, para tomar aquí.", "en": "Yes, for here." },
+        { "s": "staff", "jp": "カフェラテはホットとアイス、どちらになさいますか。", "r": "kafe rate wa hotto to aisu, dochira ni nasaimasu ka?", "ca": "El cafè amb llet, el vol calent o amb gel?", "es": "El café con leche, ¿lo quiere caliente o con hielo?", "en": "Would you like the latte hot or iced?" },
+        { "s": "you", "jp": "アイスでお願[ねが]いします。", "r": "aisu de onegai shimasu.", "ca": "Amb gel, si us plau.", "es": "Con hielo, por favor.", "en": "Iced, please." },
+        { "s": "staff", "jp": "かしこまりました。お席[せき]でお待[ま]ちください。", "r": "kashikomarimashita. oseki de omachi kudasai.", "ca": "Molt bé. Esperi a la taula, si us plau.", "es": "Muy bien. Espere en su mesa, por favor.", "en": "Certainly. Please wait at your seat." }
+      ]
+    },
+    {
+      "id": "konbini",
+      "title": { "ca": "A la botiga de conveniència", "es": "En la tienda de conveniencia", "en": "At the convenience store" },
+      "lines": [
+        { "s": "clerk", "jp": "いらっしゃいませ。お弁当[べんとう]は温[あたた]めますか。", "r": "irasshaimase. obentou wa atatamemasu ka?", "ca": "Bon dia. Li escalfo el bento?", "es": "Buenos días. ¿Le caliento el bento?", "en": "Hello. Shall I heat up the bento?" },
+        { "s": "you", "jp": "はい、お願[ねが]いします。", "r": "hai, onegai shimasu.", "ca": "Sí, si us plau.", "es": "Sí, por favor.", "en": "Yes, please." },
+        { "s": "clerk", "jp": "袋[ふくろ]はご利用[りよう]ですか。", "r": "fukuro wa goriyou desu ka?", "ca": "Vol bossa?", "es": "¿Quiere bolsa?", "en": "Would you like a bag?" },
+        { "s": "you", "jp": "いいえ、大丈夫[だいじょうぶ]です。", "r": "iie, daijoubu desu.", "ca": "No, no cal.", "es": "No, no hace falta.", "en": "No, I'm fine." },
+        { "s": "clerk", "jp": "六百五十円[ろっぴゃくごじゅうえん]です。お支払[しはら]いはどうされますか。", "r": "roppyaku gojuu-en desu. oshiharai wa dou saremasu ka?", "ca": "Són 650 iens. Com pagarà?", "es": "Son 650 yenes. ¿Cómo va a pagar?", "en": "That's 650 yen. How would you like to pay?" },
+        { "s": "you", "jp": "カードでお願[ねが]いします。", "r": "kaado de onegai shimasu.", "ca": "Amb targeta, si us plau.", "es": "Con tarjeta, por favor.", "en": "By card, please." },
+        { "s": "clerk", "jp": "はい、こちらにタッチしてください。", "r": "hai, kochira ni tacchi shite kudasai.", "ca": "D'acord, apropi-la aquí, si us plau.", "es": "Muy bien, acérquela aquí, por favor.", "en": "Okay, please tap it here." },
+        { "s": "you", "jp": "ありがとうございます。", "r": "arigatou gozaimasu.", "ca": "Moltes gràcies.", "es": "Muchas gracias.", "en": "Thank you." }
+      ]
+    }
+  ],
+  "phrases": [
+    {
+      "jp": "店内[てんない]でお願[ねが]いします。", "r": "tennai de onegai shimasu.", "ca": "Per prendre aquí, si us plau.", "es": "Para tomar aquí, por favor.", "en": "For here, please.",
+      "note": {
+        "ca": "Resposta a 店内でお召し上がりですか (És per prendre aquí?). Sovint el preu canvia una mica: per emportar té menys impostos.",
+        "es": "Respuesta a 店内でお召し上がりですか (¿Es para tomar aquí?). A menudo el precio cambia un poco: para llevar tiene menos impuestos.",
+        "en": "Answer to 店内でお召し上がりですか (Is that for here?). The price often changes slightly: take-away has a lower tax rate."
+      }
+    },
+    {
+      "jp": "持[も]ち帰[かえ]りでお願[ねが]いします。", "r": "mochikaeri de onegai shimasu.", "ca": "Per emportar, si us plau.", "es": "Para llevar, por favor.", "en": "To go, please.",
+      "note": {
+        "ca": "També s'entén テイクアウトで (teikuauto de).",
+        "es": "También se entiende テイクアウトで (teikuauto de).",
+        "en": "テイクアウトで (teikuauto de) is also understood."
+      }
+    },
+    {
+      "jp": "〜でお願[ねが]いします。", "r": "~ de onegai shimasu.", "ca": "~, si us plau.", "es": "~, por favor.", "en": "~, please.",
+      "note": {
+        "ca": "Per triar una opció: アイスで (amb gel), エムサイズで (mida mitjana), カードで (amb targeta).",
+        "es": "Para elegir una opción: アイスで (con hielo), エムサイズで (tamaño mediano), カードで (con tarjeta).",
+        "en": "To choose an option: アイスで (iced), エムサイズで (medium size), カードで (by card)."
+      }
+    },
+    {
+      "jp": "〜を一[ひと]つずつお願[ねが]いします。", "r": "~ o hitotsu zutsu onegai shimasu.", "ca": "Un de cada ~, si us plau.", "es": "Uno de cada ~, por favor.", "en": "One of each ~, please.",
+      "note": {
+        "ca": "ずつ vol dir «de cada»: ケーキとコーヒーを一つずつ (un pastís i un cafè).",
+        "es": "ずつ significa «de cada»: ケーキとコーヒーを一つずつ (una tarta y un café).",
+        "en": "ずつ means \"each\": ケーキとコーヒーを一つずつ (one cake and one coffee)."
+      }
+    },
+    {
+      "jp": "温[あたた]めますか。", "r": "atatamemasu ka?", "ca": "Li escalfo?", "es": "¿Se lo caliento?", "en": "Shall I heat it up?",
+      "note": {
+        "ca": "Ho pregunten al konbini quan compres menjar preparat. Respon はい、お願いします o いいえ、大丈夫です.",
+        "es": "Lo preguntan en el konbini cuando compras comida preparada. Responde はい、お願いします o いいえ、大丈夫です.",
+        "en": "Konbini staff ask this when you buy ready meals. Answer はい、お願いします or いいえ、大丈夫です."
+      }
+    },
+    {
+      "jp": "いいえ、大丈夫[だいじょうぶ]です。", "r": "iie, daijoubu desu.", "ca": "No, no cal.", "es": "No, no hace falta.", "en": "No, I'm fine.",
+      "note": {
+        "ca": "Manera educada de dir que no a una oferta (bossa, escalfar, coberts...). Les bosses del konbini es paguen.",
+        "es": "Forma educada de decir que no a una oferta (bolsa, calentar, cubiertos...). Las bolsas del konbini se pagan.",
+        "en": "A polite way to decline an offer (bag, heating, cutlery...). Konbini bags cost a few yen."
+      }
+    },
+    {
+      "jp": "カードで払[はら]えますか。", "r": "kaado de haraemasu ka?", "ca": "Puc pagar amb targeta?", "es": "¿Puedo pagar con tarjeta?", "en": "Can I pay by card?"
+    }
+  ]
+}

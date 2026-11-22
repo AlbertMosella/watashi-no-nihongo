@@ -1,0 +1,71 @@
+{
+  "speakers": {
+    "station-staff": { "ca": "Personal de l'estació", "es": "Personal de la estación", "en": "Station staff" },
+    "passenger": { "ca": "Passatger", "es": "Pasajero", "en": "Passenger" },
+    "driver": { "ca": "Taxista", "es": "Taxista", "en": "Taxi driver" }
+  },
+  "conversations": [
+    {
+      "id": "ticket",
+      "title": { "ca": "Comprar un bitllet", "es": "Comprar un billete", "en": "Buying a ticket" },
+      "lines": [
+        { "s": "you", "jp": "すみません。京都[きょうと]までの切符[きっぷ]を一枚[いちまい]ください。", "r": "sumimasen. kyouto made no kippu o ichimai kudasai.", "ca": "Perdoni. Un bitllet per a Kyoto, si us plau.", "es": "Perdone. Un billete para Kioto, por favor.", "en": "Excuse me. One ticket to Kyoto, please." },
+        { "s": "station-staff", "jp": "新幹線[しんかんせん]ですね。何時[なんじ]の新幹線[しんかんせん]がいいですか。", "r": "shinkansen desu ne. nanji no shinkansen ga ii desu ka?", "ca": "En Shinkansen, oi? A quina hora el vol?", "es": "En Shinkansen, ¿verdad? ¿A qué hora lo quiere?", "en": "On the Shinkansen, right? What time would you like?" },
+        { "s": "you", "jp": "十時[じゅうじ]ぐらいのはありますか。", "r": "juuji gurai no wa arimasu ka?", "ca": "N'hi ha cap cap a les deu?", "es": "¿Hay alguno sobre las diez?", "en": "Is there one around ten?" },
+        { "s": "station-staff", "jp": "十時[じゅうじ]十分[じゅっぷん]の「のぞみ」があります。", "r": "juuji juppun no \"nozomi\" ga arimasu.", "ca": "Hi ha el Nozomi de les deu i deu.", "es": "Está el Nozomi de las diez y diez.", "en": "There's the Nozomi at 10:10." },
+        { "s": "you", "jp": "じゃあ、それをお願[ねが]いします。", "r": "jaa, sore o onegai shimasu.", "ca": "Doncs aquest, si us plau.", "es": "Pues ese, por favor.", "en": "That one, then, please." },
+        { "s": "station-staff", "jp": "指定席[していせき]と自由席[じゆうせき]、どちらがいいですか。", "r": "shiteiseki to jiyuuseki, dochira ga ii desu ka?", "ca": "Seient reservat o no reservat?", "es": "¿Asiento reservado o no reservado?", "en": "Reserved or non-reserved seat?" },
+        { "s": "you", "jp": "指定席[していせき]でお願[ねが]いします。", "r": "shiteiseki de onegai shimasu.", "ca": "Reservat, si us plau.", "es": "Reservado, por favor.", "en": "Reserved, please." },
+        { "s": "station-staff", "jp": "かしこまりました。少々[しょうしょう]お待[ま]ちください。", "r": "kashikomarimashita. shoushou omachi kudasai.", "ca": "Molt bé. Un moment, si us plau.", "es": "Muy bien. Un momento, por favor.", "en": "Certainly. One moment, please." }
+      ]
+    },
+    {
+      "id": "platform",
+      "title": { "ca": "Quina via és?", "es": "¿Qué vía es?", "en": "Which platform?" },
+      "lines": [
+        { "s": "you", "jp": "すみません。新宿[しんじゅく]に行[い]きたいです。何番線[なんばんせん]ですか。", "r": "sumimasen. shinjuku ni ikitai desu. nanbansen desu ka?", "ca": "Perdoni. Vull anar a Shinjuku. Quina via és?", "es": "Perdone. Quiero ir a Shinjuku. ¿Qué vía es?", "en": "Excuse me. I want to go to Shinjuku. Which platform is it?" },
+        { "s": "station-staff", "jp": "新宿[しんじゅく]ですね。中央線[ちゅうおうせん]の一番線[いちばんせん]です。", "r": "shinjuku desu ne. chuuousen no ichibansen desu.", "ca": "Per a Shinjuku, la línia Chuo, a la via 1.", "es": "Para Shinjuku, la línea Chuo, en la vía 1.", "en": "For Shinjuku, it's the Chuo Line, platform 1." },
+        { "s": "you", "jp": "新宿[しんじゅく]まで何分[なんぷん]ぐらいかかりますか。", "r": "shinjuku made nanpun gurai kakarimasu ka?", "ca": "Quants minuts es triga fins a Shinjuku, més o menys?", "es": "¿Cuántos minutos se tarda hasta Shinjuku, más o menos?", "en": "About how many minutes does it take to Shinjuku?" },
+        { "s": "station-staff", "jp": "十五分[じゅうごふん]ぐらいです。", "r": "juugofun gurai desu.", "ca": "Uns quinze minuts.", "es": "Unos quince minutos.", "en": "About fifteen minutes." },
+        { "s": "you", "jp": "乗[の]り換[か]えはありますか。", "r": "norikae wa arimasu ka?", "ca": "Cal fer transbord?", "es": "¿Hay que hacer transbordo?", "en": "Do I have to change trains?" },
+        { "s": "station-staff", "jp": "いいえ、乗[の]り換[か]えはありません。", "r": "iie, norikae wa arimasen.", "ca": "No, no cal fer transbord.", "es": "No, no hace falta hacer transbordo.", "en": "No, there's no change." },
+        { "s": "you", "jp": "わかりました。ありがとうございます。", "r": "wakarimashita. arigatou gozaimasu.", "ca": "Entesos. Moltes gràcies.", "es": "Entendido. Muchas gracias.", "en": "Got it. Thank you very much." }
+      ]
+    },
+    {
+      "id": "this-train",
+      "title": { "ca": "Aquest tren va a Asakusa?", "es": "¿Este tren va a Asakusa?", "en": "Does this train go to Asakusa?" },
+      "lines": [
+        { "s": "you", "jp": "すみません。この電車[でんしゃ]は浅草[あさくさ]に行[い]きますか。", "r": "sumimasen. kono densha wa asakusa ni ikimasu ka?", "ca": "Perdoni. Aquest tren va a Asakusa?", "es": "Perdone. ¿Este tren va a Asakusa?", "en": "Excuse me. Does this train go to Asakusa?" },
+        { "s": "passenger", "jp": "いいえ、行[い]きません。これは渋谷[しぶや]行[ゆ]きです。", "r": "iie, ikimasen. kore wa shibuya yuki desu.", "ca": "No, no hi va. Aquest va a Shibuya.", "es": "No, no va. Este va a Shibuya.", "en": "No, it doesn't. This one is bound for Shibuya." },
+        { "s": "passenger", "jp": "浅草[あさくさ]は反対側[はんたいがわ]のホームですよ。", "r": "asakusa wa hantaigawa no hoomu desu yo.", "ca": "Per anar a Asakusa, és l'andana de l'altra banda.", "es": "Para Asakusa, es el andén del otro lado.", "en": "For Asakusa, it's the platform on the other side." },
+        { "s": "you", "jp": "あ、そうですか。浅草[あさくさ]まで何駅[なんえき]ですか。", "r": "a, sou desu ka. asakusa made nan'eki desu ka?", "ca": "Ah, d'acord. Quantes parades hi ha fins a Asakusa?", "es": "Ah, vale. ¿Cuántas paradas hay hasta Asakusa?", "en": "Oh, I see. How many stops is it to Asakusa?" },
+        { "s": "passenger", "jp": "三[みっ]つ目[め]の駅[えき]です。", "r": "mittsume no eki desu.", "ca": "És la tercera parada.", "es": "Es la tercera parada.", "en": "It's the third stop." },
+        { "s": "you", "jp": "助[たす]かりました。ありがとうございます。", "r": "tasukarimashita. arigatou gozaimasu.", "ca": "M'ha estat de gran ajuda. Moltes gràcies.", "es": "Me ha sido de gran ayuda. Muchas gracias.", "en": "That's a great help. Thank you very much." }
+      ]
+    },
+    {
+      "id": "taxi",
+      "title": { "ca": "Agafar un taxi", "es": "Coger un taxi", "en": "Taking a taxi" },
+      "lines": [
+        { "s": "driver", "jp": "どちらまでですか。", "r": "dochira made desu ka?", "ca": "On anem?", "es": "¿Adónde vamos?", "en": "Where to?" },
+        { "s": "you", "jp": "浅草寺[せんそうじ]までお願[ねが]いします。", "r": "sensouji made onegai shimasu.", "ca": "Al temple Senso-ji, si us plau.", "es": "Al templo Senso-ji, por favor.", "en": "To Senso-ji Temple, please." },
+        { "s": "driver", "jp": "はい、かしこまりました。", "r": "hai, kashikomarimashita.", "ca": "Molt bé.", "es": "Muy bien.", "en": "Certainly." },
+        { "s": "you", "jp": "どのぐらいかかりますか。", "r": "dono gurai kakarimasu ka?", "ca": "Quant es triga?", "es": "¿Cuánto se tarda?", "en": "How long does it take?" },
+        { "s": "driver", "jp": "二十分[にじゅっぷん]ぐらいですね。", "r": "nijuppun gurai desu ne.", "ca": "Uns vint minuts.", "es": "Unos veinte minutos.", "en": "About twenty minutes." },
+        { "s": "driver", "jp": "着[つ]きました。三千二百円[さんぜんにひゃくえん]です。", "r": "tsukimashita. sanzen nihyaku en desu.", "ca": "Ja hi som. Són 3.200 iens.", "es": "Ya hemos llegado. Son 3.200 yenes.", "en": "Here we are. That's 3,200 yen." },
+        { "s": "you", "jp": "カードでもいいですか。", "r": "kaado demo ii desu ka?", "ca": "Puc pagar amb targeta?", "es": "¿Puedo pagar con tarjeta?", "en": "Is a card OK?" },
+        { "s": "driver", "jp": "はい、大丈夫[だいじょうぶ]です。", "r": "hai, daijoubu desu.", "ca": "Sí, cap problema.", "es": "Sí, sin problema.", "en": "Yes, that's fine." }
+      ]
+    }
+  ],
+  "phrases": [
+    { "jp": "〜までの切符[きっぷ]を一枚[いちまい]ください。", "r": "~ made no kippu o ichimai kudasai.", "ca": "Un bitllet per a ~, si us plau.", "es": "Un billete para ~, por favor.", "en": "One ticket to ~, please.", "note": { "ca": "枚 és el comptador de coses planes, com els bitllets: 一枚[いちまい], 二枚[にまい], 三枚[さんまい].", "es": "枚 es el contador de cosas planas, como los billetes: 一枚[いちまい], 二枚[にまい], 三枚[さんまい].", "en": "枚 is the counter for flat things like tickets: 一枚[いちまい], 二枚[にまい], 三枚[さんまい]." } },
+    { "jp": "〜は何番線[なんばんせん]ですか。", "r": "~ wa nanbansen desu ka?", "ca": "A quina via és ~?", "es": "¿En qué vía está ~?", "en": "Which platform is ~?", "note": { "ca": "La resposta: 一番線[いちばんせん] (via 1), 二番線[にばんせん] (via 2)…", "es": "La respuesta: 一番線[いちばんせん] (vía 1), 二番線[にばんせん] (vía 2)…", "en": "The answer: 一番線[いちばんせん] (platform 1), 二番線[にばんせん] (platform 2)…" } },
+    { "jp": "この電車[でんしゃ]は〜に行[い]きますか。", "r": "kono densha wa ~ ni ikimasu ka?", "ca": "Aquest tren va a ~?", "es": "¿Este tren va a ~?", "en": "Does this train go to ~?", "note": { "ca": "Als rètols, 〜行[ゆ]き vol dir «amb destinació a ~».", "es": "En los carteles, 〜行[ゆ]き significa «con destino a ~».", "en": "On signs, 〜行[ゆ]き means \"bound for ~\"." } },
+    { "jp": "〜まで何分[なんぷん]ぐらいかかりますか。", "r": "~ made nanpun gurai kakarimasu ka?", "ca": "Quants minuts es triga fins a ~?", "es": "¿Cuántos minutos se tarda hasta ~?", "en": "About how many minutes does it take to ~?", "note": { "ca": "かかります vol dir «costar» temps o diners.", "es": "かかります significa «llevar» tiempo o «costar» dinero.", "en": "かかります means \"to take\" (time) or \"to cost\" (money)." } },
+    { "jp": "乗[の]り換[か]えはありますか。", "r": "norikae wa arimasu ka?", "ca": "Cal fer transbord?", "es": "¿Hay que hacer transbordo?", "en": "Do I have to change trains?" },
+    { "jp": "〜までお願[ねが]いします。", "r": "~ made onegai shimasu.", "ca": "A ~, si us plau.", "es": "A ~, por favor.", "en": "To ~, please.", "note": { "ca": "Per dir al taxista on vas. Al Japó la porta del taxi s'obre i es tanca sola.", "es": "Para decirle al taxista adónde vas. En Japón la puerta del taxi se abre y se cierra sola.", "en": "To tell the taxi driver where you're going. In Japan the taxi door opens and closes by itself." } },
+    { "jp": "ここで止[と]めてください。", "r": "koko de tomete kudasai.", "ca": "Pari aquí, si us plau.", "es": "Pare aquí, por favor.", "en": "Please stop here." }
+  ]
+}

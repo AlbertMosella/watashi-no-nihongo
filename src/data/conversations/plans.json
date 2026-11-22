@@ -1,0 +1,53 @@
+{
+  "speakers": {
+    "friend": { "ca": "Sato", "es": "Sato", "en": "Sato" }
+  },
+  "conversations": [
+    {
+      "id": "invitation",
+      "title": { "ca": "Proposar un pla", "es": "Proponer un plan", "en": "Suggesting a plan" },
+      "lines": [
+        { "s": "friend", "jp": "マルクさん、今度[こんど]の土曜日[どようび]は暇[ひま]ですか。", "r": "maruku-san, kondo no doyoubi wa hima desu ka?", "ca": "Marc, aquest dissabte tens temps lliure?", "es": "Marc, ¿este sábado estás libre?", "en": "Marc, are you free this Saturday?" },
+        { "s": "you", "jp": "はい、暇[ひま]です。", "r": "hai, hima desu.", "ca": "Sí, estic lliure.", "es": "Sí, estoy libre.", "en": "Yes, I'm free." },
+        { "s": "friend", "jp": "一緒[いっしょ]に映画[えいが]を見[み]ませんか。", "r": "issho ni eiga o mimasen ka?", "ca": "Per què no anem junts al cinema?", "es": "¿Por qué no vamos juntos al cine?", "en": "Would you like to watch a movie together?" },
+        { "s": "you", "jp": "いいですね。どんな映画[えいが]ですか。", "r": "ii desu ne. donna eiga desu ka?", "ca": "Bona idea. Quina pel·lícula és?", "es": "¡Buena idea! ¿Qué película es?", "en": "Sounds good. What kind of movie is it?" },
+        { "s": "friend", "jp": "日本[にほん]のアニメ映画[えいが]です。", "r": "nihon no anime eiga desu.", "ca": "És una pel·lícula d'anime japonesa.", "es": "Es una película de anime japonesa.", "en": "It's a Japanese anime film." },
+        { "s": "you", "jp": "見[み]たいです。ぜひ行[い]きましょう。", "r": "mitai desu. zehi ikimashou.", "ca": "La vull veure. Anem-hi, sens dubte.", "es": "Quiero verla. ¡Vamos, sin duda!", "en": "I'd love to see it. Let's definitely go." }
+      ]
+    },
+    {
+      "id": "time-and-place",
+      "title": { "ca": "Quedar: hora i lloc", "es": "Quedar: hora y lugar", "en": "Agreeing on a time and place" },
+      "lines": [
+        { "s": "you", "jp": "佐藤[さとう]さん、土曜日[どようび]は何時[なんじ]にどこで会[あ]いましょうか。", "r": "satou-san, doyoubi wa nanji ni doko de aimashou ka?", "ca": "Sato, a quina hora i on quedem dissabte?", "es": "Sato, ¿a qué hora y dónde quedamos el sábado?", "en": "Sato, what time and where shall we meet on Saturday?" },
+        { "s": "friend", "jp": "映画[えいが]は二時[にじ]からです。一時[いちじ]半[はん]に渋谷[しぶや]駅[えき]で会[あ]いませんか。", "r": "eiga wa niji kara desu. ichiji han ni shibuya eki de aimasen ka?", "ca": "La pel·lícula comença a les dues. Quedem a la una i mitja a l'estació de Shibuya?", "es": "La película empieza a las dos. ¿Quedamos a la una y media en la estación de Shibuya?", "en": "The movie starts at two. Shall we meet at half past one at Shibuya Station?" },
+        { "s": "you", "jp": "いいですよ。駅[えき]のどこですか。", "r": "ii desu yo. eki no doko desu ka?", "ca": "D'acord. On, de l'estació?", "es": "Vale. ¿En qué parte de la estación?", "en": "Sure. Where in the station?" },
+        { "s": "friend", "jp": "ハチ公[こう]の前[まえ]はどうですか。", "r": "hachikou no mae wa dou desu ka?", "ca": "Què et sembla davant de l'estàtua d'en Hachiko?", "es": "¿Qué te parece delante de la estatua de Hachiko?", "en": "How about in front of the Hachiko statue?" },
+        { "s": "you", "jp": "わかりました。一時[いちじ]半[はん]にハチ公[こう]の前[まえ]ですね。", "r": "wakarimashita. ichiji han ni hachikou no mae desu ne.", "ca": "Entesos. A la una i mitja davant d'en Hachiko, doncs.", "es": "Entendido. A la una y media delante de Hachiko, entonces.", "en": "Got it. Half past one in front of Hachiko, then." },
+        { "s": "friend", "jp": "はい。じゃあ、また土曜日[どようび]に。", "r": "hai. jaa, mata doyoubi ni.", "ca": "Sí. Doncs fins dissabte.", "es": "Sí. Pues hasta el sábado.", "en": "Yes. See you on Saturday, then." }
+      ]
+    },
+    {
+      "id": "declining",
+      "title": { "ca": "Dir que no amb educació", "es": "Decir que no con educación", "en": "Declining politely" },
+      "lines": [
+        { "s": "friend", "jp": "マルクさん、日曜日[にちようび]に一緒[いっしょ]に晩[ばん]ごはんを食[た]べませんか。", "r": "maruku-san, nichiyoubi ni issho ni bangohan o tabemasen ka?", "ca": "Marc, per què no sopem junts diumenge?", "es": "Marc, ¿por qué no cenamos juntos el domingo?", "en": "Marc, would you like to have dinner together on Sunday?" },
+        { "s": "you", "jp": "すみません、その日[ひ]はちょっと…。", "r": "sumimasen, sono hi wa chotto...", "ca": "Ho sento, aquell dia em va una mica malament...", "es": "Lo siento, ese día me va un poco mal...", "en": "Sorry, that day is a bit..." },
+        { "s": "you", "jp": "日曜日[にちようび]は京都[きょうと]に行[い]きます。", "r": "nichiyoubi wa kyouto ni ikimasu.", "ca": "Diumenge vaig a Kyoto.", "es": "El domingo voy a Kioto.", "en": "I'm going to Kyoto on Sunday." },
+        { "s": "friend", "jp": "そうですか。残念[ざんねん]ですね。", "r": "sou desu ka. zannen desu ne.", "ca": "Ah, sí? Quina llàstima.", "es": "¿Ah, sí? Qué pena.", "en": "Oh, I see. That's a shame." },
+        { "s": "you", "jp": "月曜日[げつようび]の夜[よる]はどうですか。", "r": "getsuyoubi no yoru wa dou desu ka?", "ca": "Què et sembla dilluns al vespre?", "es": "¿Qué te parece el lunes por la noche?", "en": "How about Monday evening?" },
+        { "s": "friend", "jp": "月曜日[げつようび]は大丈夫[だいじょうぶ]です。", "r": "getsuyoubi wa daijoubu desu.", "ca": "Dilluns em va bé.", "es": "El lunes me va bien.", "en": "Monday works for me." },
+        { "s": "you", "jp": "じゃあ、月曜日[げつようび]にしましょう。楽[たの]しみにしています。", "r": "jaa, getsuyoubi ni shimashou. tanoshimi ni shite imasu.", "ca": "Doncs quedem dilluns. Tinc moltes ganes que arribi!", "es": "Pues quedamos el lunes. ¡Tengo muchas ganas!", "en": "Then let's make it Monday. I'm looking forward to it." }
+      ]
+    }
+  ],
+  "phrases": [
+    { "jp": "一緒[いっしょ]に〜ませんか。", "r": "issho ni ~ masen ka?", "ca": "Per què no ~ junts?", "es": "¿Por qué no ~ juntos?", "en": "Would you like to ~ together?", "note": { "ca": "Invitació educada: la forma negativa en pregunta (見ませんか、食べませんか) sona menys insistent.", "es": "Invitación educada: la forma negativa en pregunta (見ませんか、食べませんか) suena menos insistente.", "en": "A polite invitation: the negative question form (見ませんか、食べませんか) sounds less pushy." } },
+    { "jp": "〜ましょう。", "r": "~ mashou.", "ca": "Som-hi: ~!", "es": "¡Vamos a ~!", "en": "Let's ~.", "note": { "ca": "Per acceptar una proposta o proposar amb entusiasme: 行きましょう = anem-hi.", "es": "Para aceptar una propuesta o proponer con entusiasmo: 行きましょう = vamos.", "en": "To accept a suggestion or propose something keenly: 行きましょう = let's go." } },
+    { "jp": "何時[なんじ]にどこで会[あ]いましょうか。", "r": "nanji ni doko de aimashou ka?", "ca": "A quina hora i on quedem?", "es": "¿A qué hora y dónde quedamos?", "en": "What time and where shall we meet?", "note": { "ca": "に marca l'hora; で marca el lloc on passa l'acció.", "es": "に marca la hora; で marca el lugar donde ocurre la acción.", "en": "に marks the time; で marks the place where the action happens." } },
+    { "jp": "〜はどうですか。", "r": "~ wa dou desu ka?", "ca": "Què et sembla ~?", "es": "¿Qué te parece ~?", "en": "How about ~?", "note": { "ca": "Per proposar una alternativa: un dia, una hora o un lloc.", "es": "Para proponer una alternativa: un día, una hora o un lugar.", "en": "To suggest an alternative: a day, a time or a place." } },
+    { "jp": "いいですね。", "r": "ii desu ne.", "ca": "Bona idea!", "es": "¡Buena idea!", "en": "Sounds good.", "note": { "ca": "La manera més natural d'acceptar una invitació.", "es": "La forma más natural de aceptar una invitación.", "en": "The most natural way to accept an invitation." } },
+    { "jp": "すみません、その日[ひ]はちょっと…。", "r": "sumimasen, sono hi wa chotto...", "ca": "Ho sento, aquell dia em va una mica malament...", "es": "Lo siento, ese día me va un poco mal...", "en": "Sorry, that day is a bit...", "note": { "ca": "En japonès és normal deixar la frase a mitges: ちょっと… ja vol dir que no, sense ser brusc.", "es": "En japonés es normal dejar la frase a medias: ちょっと… ya significa que no, sin ser brusco.", "en": "In Japanese it's normal to leave the sentence unfinished: ちょっと… already means no, without sounding blunt." } },
+    { "jp": "楽[たの]しみにしています。", "r": "tanoshimi ni shite imasu.", "ca": "Tinc moltes ganes que arribi.", "es": "Tengo muchas ganas.", "en": "I'm looking forward to it." }
+  ]
+}
