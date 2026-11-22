@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef } from 'react';
+import { useId, useRef } from 'react';
 import { useT } from '@/app/i18n';
 import { Icon } from '@/ui/components';
 import styles from './SearchBar.module.css';
@@ -6,20 +6,15 @@ import styles from './SearchBar.module.css';
 export interface SearchBarProps {
   query: string;
   onChange: (query: string) => void;
-  onClose: () => void;
   /** Nombre de resultats (null mentre es carreguen les targetes o si no hi ha cerca). */
   count: number | null;
 }
 
-/** Camp de cerca de targetes amb el comptador de resultats. Esc el tanca. */
-export function SearchBar({ query, onChange, onClose, count }: SearchBarProps) {
+/** Camp de cerca de targetes, sempre visible, amb el comptador de resultats. Esc l'esborra. */
+export function SearchBar({ query, onChange, count }: SearchBarProps) {
   const t = useT();
   const id = useId();
   const input = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    input.current?.focus();
-  }, []);
 
   const label = count === null ? '' : count === 1 ? t('search.result') : t('search.results', { n: count });
 
@@ -45,7 +40,7 @@ export function SearchBar({ query, onChange, onClose, count }: SearchBarProps) {
         value={query}
         onChange={(e) => onChange(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === 'Escape') onClose();
+          if (e.key === 'Escape') onChange('');
           if (e.key === 'Enter') e.currentTarget.blur();
         }}
       />

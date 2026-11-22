@@ -43,15 +43,11 @@ function Main() {
   const categoryIds = useSetting('categoryIds');
   const online = useOnline();
 
-  // Cerca de text (no es desa: és una consulta puntual).
-  const [searchOpen, setSearchOpen] = useState(false);
+  // Cerca de text, sempre visible a Targetes (no es desa: és una consulta puntual).
+  // Buida → manen les categories. Amb text → es cerca a totes les targetes i el filtre es desactiva.
   const [query, setQuery] = useState('');
   const searchState = useSearchDeck(query);
-  const searching = section === 'cards' && searchOpen && query.trim().length > 0;
-  const closeSearch = () => {
-    setSearchOpen(false);
-    setQuery('');
-  };
+  const searching = section === 'cards' && query.trim().length > 0;
 
   const open = (p: Panel) => {
     setOpened((s) => new Set(s).add(p));
@@ -61,7 +57,7 @@ function Main() {
 
 
   return (
-    <div className={cx(styles.app, section === 'cards' && searchOpen && styles.withSearch)}>
+    <div className={cx(styles.app, section === 'cards' && styles.withSearch)}>
       {section === 'cards' ? (
         <Deck
           onOpenFilters={() => open('categories')}
@@ -94,17 +90,14 @@ function Main() {
             </span>
           )}
           {section === 'cards' && (
-            <IconButton
-              icon={searchOpen ? 'close' : 'search'}
-              label={searchOpen ? t('search.clear') : t('search.open')}
-              aria-pressed={searchOpen}
-              onClick={() => (searchOpen ? closeSearch() : setSearchOpen(true))}
-            />
-          )}
-          {section === 'cards' && !searchOpen && (
             <span className={styles.filter}>
-              <IconButton icon="layers" label={t('filters.icon')} onClick={() => open('categories')} />
-              {categoryIds.length > 0 && (
+              <IconButton
+                icon="layers"
+                label={searching ? t('filters.disabled') : t('filters.icon')}
+                disabled={searching}
+                onClick={() => open('categories')}
+              />
+              {categoryIds.length > 0 && !searching && (
                 <span className={styles.count} aria-hidden="true">
                   {categoryIds.length}
                 </span>
@@ -115,11 +108,10 @@ function Main() {
         </div>
       </header>
 
-      {section === 'cards' && searchOpen && (
+      {section === 'cards' && (
         <SearchBar
           query={query}
           onChange={setQuery}
-          onClose={closeSearch}
           count={searching && searchState.status === 'ready' ? searchState.cards.length : null}
         />
       )}
