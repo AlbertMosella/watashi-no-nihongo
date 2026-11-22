@@ -1,0 +1,52 @@
+.stack {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.group {
+  display: grid;
+  justify-items: start;
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+}
+
+.group > :not(button) {
+  width: 100%;
+}
+
+.group > button {
+  margin-bottom: var(--space-3);
+}
+
+.section {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionHeader h3 {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.version {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  text-align: center;
+}
