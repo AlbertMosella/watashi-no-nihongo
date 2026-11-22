@@ -46,6 +46,14 @@ const PATHS = {
     </>
   ),
   check: <path d="M20 6 9 17l-5-5" />,
+  swap: (
+    <>
+      <path d="M7 4v14" />
+      <path d="m3 8 4-4 4 4" />
+      <path d="M17 20V6" />
+      <path d="m21 16-4 4-4-4" />
+    </>
+  ),
   offline: (
     <>
       <path d="m2 2 20 20" />

@@ -26,6 +26,13 @@ export function useT(): Translate {
   return useMemo(() => createTranslator(language), [language]);
 }
 
+/** Nom de cada idioma en el seu propi idioma (per triar-lo sense dependre de l'idioma actual). */
+export const LANGUAGE_ENDONYMS: Readonly<Record<StudentLanguage, string>> = {
+  ca: 'Català',
+  es: 'Castellano',
+  en: 'English',
+};
+
 export function categoryLabelKey(categoryId: string): MessageKey {
   return `category.${categoryId}` as MessageKey;
 }

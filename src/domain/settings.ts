@@ -16,6 +16,8 @@ export interface Settings {
   readonly shuffleSeed: number;
   readonly theme: ThemePreference;
   readonly categoryIds: readonly string[];
+  /** L'usuari ja ha passat per la pantalla de benvinguda. */
+  readonly onboarded: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -28,6 +30,7 @@ export const DEFAULT_SETTINGS: Settings = {
   shuffleSeed: 1,
   theme: 'system',
   categoryIds: ['hiragana-basic'],
+  onboarded: false,
 };
 
 const oneOf =
@@ -63,5 +66,6 @@ export function sanitizeSettings(raw: unknown, knownCategoryIds?: ReadonlySet<st
     shuffleSeed: Number.isInteger(r.shuffleSeed) ? (r.shuffleSeed as number) : d.shuffleSeed,
     theme: isTheme(r.theme) ? r.theme : d.theme,
     categoryIds: [...new Set(categoryIds)],
+    onboarded: isBool(r.onboarded) ? r.onboarded : d.onboarded,
   };
 }

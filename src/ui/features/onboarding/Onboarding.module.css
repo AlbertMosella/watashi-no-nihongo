@@ -1,0 +1,192 @@
+/* Pantalla completa amb scroll si el mòbil és petit. A baix es respecta la franja
+   reservada (--bottom-bar) perquè el botó no quedi sota el badge de Netlify. */
+.screen {
+  height: 100dvh;
+  overflow-y: auto;
+  padding: calc(var(--safe-top) + var(--space-5)) var(--space-5) calc(var(--safe-bottom) + var(--bottom-bar));
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 420px;
+  min-height: 100%;
+  margin: 0 auto;
+  justify-content: center;
+  animation: appear 600ms var(--ease-out);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+/* --- Il·lustració: dues targetes apilades; la de davant es gira sola --- */
+.illustration {
+  --hue: 345;
+  position: relative;
+  align-self: center;
+  width: 120px;
+  height: 150px;
+  perspective: 800px;
+}
+
+.cardBack,
+.cardFront {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+}
+
+.cardBack {
+  --hue: 268;
+  background: var(--card-bg-2);
+  transform: rotate(-10deg) translateX(-10px);
+}
+
+.cardFront {
+  background: linear-gradient(160deg, var(--card-bg), var(--card-bg-2));
+  color: var(--card-ink);
+  transform-style: preserve-3d;
+  transform: rotate(6deg);
+  animation: flip 5s var(--ease-spring) infinite;
+}
+
+.faceA,
+.faceB {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.faceB {
+  font-family: var(--font-ja);
+  font-weight: 400;
+  transform: rotateY(180deg);
+}
+
+@keyframes flip {
+  0%,
+  35% {
+    transform: rotate(6deg) rotateY(0deg);
+  }
+  50%,
+  85% {
+    transform: rotate(6deg) rotateY(180deg);
+  }
+  100% {
+    transform: rotate(6deg) rotateY(360deg);
+  }
+}
+
+/* --- Textos --- */
+.header {
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-xl);
+  line-height: 1.2;
+}
+
+.kanji {
+  margin: var(--space-1) 0 0;
+  color: var(--color-accent);
+  font-size: var(--text-lg);
+  letter-spacing: 0.15em;
+}
+
+.subtitle {
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-muted);
+}
+
+.points {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.points li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.pointIcon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-accent);
+}
+
+.start {
+  width: 100%;
+  min-height: 52px;
+  font-size: var(--text-md);
+}
+
+/* Mòbils baixos (p. ex. iPhone SE): més compacte perquè tot càpiga sense scroll. */
+@media (max-height: 740px) {
+  .screen {
+    padding-top: calc(var(--safe-top) + var(--space-4));
+  }
+  .content {
+    gap: var(--space-4);
+  }
+  .illustration {
+    width: 84px;
+    height: 104px;
+  }
+  .cardBack,
+  .cardFront {
+    border-radius: 14px;
+  }
+  .faceA,
+  .faceB {
+    font-size: 2.4rem;
+  }
+  .title {
+    font-size: var(--text-lg);
+  }
+  .kanji {
+    font-size: var(--text-md);
+  }
+  .subtitle {
+    margin-top: var(--space-1);
+  }
+  .points {
+    gap: var(--space-2);
+    padding: var(--space-3);
+  }
+  .start {
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardFront,
+  .content {
+    animation: none;
+  }
+}

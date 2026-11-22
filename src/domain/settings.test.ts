@@ -14,6 +14,12 @@ describe('sanitizeSettings', () => {
     expect(s.theme).toBe('dark');
   });
 
+  it("recorda si ja s'ha vist la benvinguda", () => {
+    expect(sanitizeSettings({}).onboarded).toBe(false);
+    expect(sanitizeSettings({ onboarded: true }).onboarded).toBe(true);
+    expect(sanitizeSettings({ onboarded: 'sí' }).onboarded).toBe(false);
+  });
+
   it('elimina categories desconegudes i duplicades', () => {
     const s = sanitizeSettings({ categoryIds: ['a', 'a', 'zz', 3] }, new Set(['a', 'b']));
     expect(s.categoryIds).toEqual(['a']);

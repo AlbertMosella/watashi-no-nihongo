@@ -8,12 +8,28 @@ import styles from './App.module.css';
 // Els panells no calen per al primer pintat: es carreguen a part.
 const SettingsSheet = lazy(() => import('./features/settings/SettingsSheet').then((m) => ({ default: m.SettingsSheet })));
 const CategorySheet = lazy(() => import('./features/settings/CategorySheet').then((m) => ({ default: m.CategorySheet })));
+// La benvinguda només surt el primer cop: no cal carregar-la per a la resta de visites.
+const Onboarding = lazy(() => import('./features/onboarding/Onboarding').then((m) => ({ default: m.Onboarding })));
 const UpdatePrompt = lazy(() => import('./features/update/UpdatePrompt').then((m) => ({ default: m.UpdatePrompt })));
 
 type Panel = 'none' | 'settings' | 'categories';
 
 export function App() {
   useDocumentSettings();
+  const onboarded = useSetting('onboarded');
+
+  return (
+    <>
+      <Suspense fallback={null}>{onboarded ? <Study /> : <Onboarding />}</Suspense>
+      <Suspense fallback={null}>
+        <UpdatePrompt />
+      </Suspense>
+    </>
+  );
+}
+
+/** Pantalla principal: el mall de targetes amb la barra d'eines i els panells. */
+function Study() {
   const t = useT();
   const [panel, setPanel] = useState<Panel>('none');
   const [opened, setOpened] = useState<ReadonlySet<Panel>>(new Set());
@@ -52,7 +68,6 @@ export function App() {
       <Suspense fallback={null}>
         {opened.has('settings') && <SettingsSheet open={panel === 'settings'} onClose={close} />}
         {opened.has('categories') && <CategorySheet open={panel === 'categories'} onClose={close} />}
-        <UpdatePrompt />
       </Suspense>
     </div>
   );
