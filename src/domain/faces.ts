@@ -1,5 +1,6 @@
 import type { Card, KanjiCard, WordCard } from './card';
-import { furiganaToKana, plainFurigana, type FuriganaText } from './furigana';
+import { toJapaneseText, type JapaneseText } from './display';
+import { furiganaToKana } from './furigana';
 import type { Settings } from './settings';
 
 /**
@@ -8,11 +9,7 @@ import type { Settings } from './settings';
  * cara inicial...) es poden provar amb tests unitaris.
  */
 
-export interface JapaneseText {
-  readonly text: FuriganaText;
-  readonly showFurigana: boolean;
-  readonly romaji?: string;
-}
+export type { JapaneseText } from './display';
 
 export interface KanjiDetails {
   readonly on: readonly string[];
@@ -99,10 +96,5 @@ function kanjiDetails(card: KanjiCard, s: FaceSettings): KanjiDetails {
 }
 
 function japaneseText(card: WordCard, s: FaceSettings): JapaneseText {
-  const text = s.scriptMode === 'kana' ? plainFurigana(furiganaToKana(card.japanese)) : card.japanese;
-  return {
-    text,
-    showFurigana: s.showFurigana,
-    romaji: s.showRomaji ? card.romaji : undefined,
-  };
+  return toJapaneseText(card.japanese, card.romaji, s);
 }
