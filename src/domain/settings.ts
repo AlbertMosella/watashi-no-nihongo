@@ -5,6 +5,8 @@ export type FrontSide = 'native' | 'japanese';
 /** 'kana': només hiragana/katakana. 'kanji': forma habitual amb kanji. */
 export type ScriptMode = 'kana' | 'kanji';
 export type ThemePreference = 'system' | 'light' | 'dark';
+/** Apartat principal de l'app. */
+export type Section = 'cards' | 'conversations';
 
 export interface Settings {
   readonly language: StudentLanguage;
@@ -18,6 +20,9 @@ export interface Settings {
   readonly categoryIds: readonly string[];
   /** L'usuari ja ha passat per la pantalla de benvinguda. */
   readonly onboarded: boolean;
+  readonly section: Section;
+  /** Converses en mode pràctica (respostes amagades). */
+  readonly practice: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -31,6 +36,8 @@ export const DEFAULT_SETTINGS: Settings = {
   theme: 'system',
   categoryIds: ['hiragana-basic'],
   onboarded: false,
+  section: 'cards',
+  practice: false,
 };
 
 const oneOf =
@@ -41,6 +48,7 @@ const oneOf =
 const isFrontSide = oneOf<FrontSide>(['native', 'japanese']);
 const isScriptMode = oneOf<ScriptMode>(['kana', 'kanji']);
 const isTheme = oneOf<ThemePreference>(['system', 'light', 'dark']);
+const isSection = oneOf<Section>(['cards', 'conversations']);
 const isBool = (v: unknown): v is boolean => typeof v === 'boolean';
 
 /**
@@ -67,5 +75,7 @@ export function sanitizeSettings(raw: unknown, knownCategoryIds?: ReadonlySet<st
     theme: isTheme(r.theme) ? r.theme : d.theme,
     categoryIds: [...new Set(categoryIds)],
     onboarded: isBool(r.onboarded) ? r.onboarded : d.onboarded,
+    section: isSection(r.section) ? r.section : d.section,
+    practice: isBool(r.practice) ? r.practice : d.practice,
   };
 }

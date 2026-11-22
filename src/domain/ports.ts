@@ -1,5 +1,6 @@
 import type { Card } from './card';
 import type { Category } from './category';
+import type { Topic, TopicContent } from './conversation';
 
 /**
  * Ports (interfícies) que el domini necessita del món exterior.
@@ -12,6 +13,13 @@ export interface CardRepository {
   getCategories(): readonly Category[];
   /** Carrega (i guarda en memòria) les targetes d'una categoria. */
   getCards(categoryId: string): Promise<readonly Card[]>;
+}
+
+export interface ConversationRepository {
+  /** Totes les temàtiques, en ordre. */
+  getTopics(): readonly Topic[];
+  /** Carrega (i guarda en memòria) les converses d'una temàtica. */
+  getTopic(topicId: string): Promise<TopicContent>;
 }
 
 export interface KeyValueStorage {
