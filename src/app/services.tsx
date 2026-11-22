@@ -5,6 +5,7 @@ import { JsonCardRepository, viteCardLoaders } from '@/data/jsonCardRepository';
 import { JsonConversationRepository, viteTopicLoaders } from '@/data/jsonConversationRepository';
 import { LocalStorageAdapter } from '@/data/localStorageAdapter';
 import { TOPICS } from '@/data/topics';
+import { InstallPrompt } from './installPrompt';
 import { PwaUpdates } from './pwaUpdates';
 import { SettingsStore } from './settingsStore';
 import { WebSpeechService } from './webSpeechService';
@@ -16,6 +17,7 @@ export interface AppServices {
   readonly settings: SettingsStore;
   readonly speech: SpeechService;
   readonly updates: PwaUpdates;
+  readonly install: InstallPrompt;
 }
 
 /** Composition root: l'únic lloc on es trien les implementacions concretes. */
@@ -26,6 +28,7 @@ export function createAppServices(): AppServices {
     settings: new SettingsStore(new LocalStorageAdapter(), new Set(CATEGORIES.map((c) => c.id))),
     speech: new WebSpeechService(),
     updates: new PwaUpdates(),
+    install: new InstallPrompt(),
   };
 }
 

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import { InstallPrompt } from '@/app/installPrompt';
 import { PwaUpdates } from '@/app/pwaUpdates';
 import { ServicesProvider, type AppServices } from '@/app/services';
 import { SettingsStore } from '@/app/settingsStore';
@@ -23,6 +24,7 @@ export function createTestServices(storage = new MemoryStorage()): AppServices {
     settings: new SettingsStore(storage),
     speech: silentSpeech,
     updates: new PwaUpdates(undefined),
+    install: new InstallPrompt(undefined),
   };
 }
 

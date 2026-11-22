@@ -121,6 +121,14 @@ export function useTopic(topicId: string): TopicState {
   return result?.topicId === topicId ? result.state : { status: 'loading' };
 }
 
+/** Com es pot instal·lar l'app en aquest dispositiu (o si ja ho està). */
+export function useInstall() {
+  const { install } = useServices();
+  const mode = useSyncExternalStore(install.subscribe, install.getSnapshot);
+  const prompt = useCallback(() => install.install(), [install]);
+  return { mode, prompt };
+}
+
 export function useSpeech() {
   const { speech } = useServices();
   const available = useSyncExternalStore(
