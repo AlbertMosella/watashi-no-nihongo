@@ -1,6 +1,11 @@
 # Watashi no Nihongo 私の日本語
 
-PWA per aprendre japonès amb targetes: hiragana, katakana, kanji i vocabulari.
+PWA per aprendre japonès amb dos apartats:
+
+- **Targetes:** hiragana, katakana, kanji i vocabulari per categories.
+- **Converses:** diàlegs curts per temàtiques (presentar-se, restaurant, orientar-se…)
+  amb la traducció a sota i un mode pràctica que amaga les respostes.
+
 Funciona 100% offline i s'instal·la al mòbil.
 
 ## Scripts
@@ -50,6 +55,19 @@ L'etiqueta de cada categoria és a `src/app/i18n/*.ts`.
 - `jp` fa servir la notació de furigana: la lectura entre claudàtors s'aplica als kanji immediatament anteriors.
 - El romaji es calcula automàticament. El camp opcional `r` el força, per exemple per a partícules (は → wa).
 - `src/data/dataset.test.ts` valida totes les dades: format, furigana, romaji i duplicats.
+
+### Converses
+
+Cada temàtica és `src/data/conversations/<id>.json` i està registrada a `src/data/topics.ts`.
+El format està documentat a `src/data/rawConversations.ts`.
+
+```json
+{ "s": "staff", "jp": "何名様[なんめいさま]ですか。", "r": "nanmei-sama desu ka?", "ca": "Quantes persones són?", "es": "...", "en": "..." }
+```
+
+- `s` és qui parla: `you` és sempre l'estudiant, i la resta es defineixen a `speakers`.
+- Aquí el romaji (`r`) és obligatori, perquè les frases tenen partícules i espais.
+- `src/data/conversations.test.ts` valida totes les converses.
 
 ## PWA i actualitzacions
 
