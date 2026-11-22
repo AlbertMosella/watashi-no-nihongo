@@ -6,8 +6,8 @@ import { Button, Icon, SegmentedControl, type IconName } from '@/ui/components';
 import styles from './Onboarding.module.css';
 
 const POINTS: readonly { icon: IconName; text: MessageKey }[] = [
-  { icon: 'flip', text: 'onboarding.cards' },
-  { icon: 'layers', text: 'onboarding.categories' },
+  { icon: 'cards', text: 'onboarding.cards' },
+  { icon: 'chat', text: 'onboarding.conversations' },
   { icon: 'swap', text: 'onboarding.front' },
 ];
 

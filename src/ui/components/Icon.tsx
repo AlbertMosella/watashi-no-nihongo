@@ -46,6 +46,20 @@ const PATHS = {
     </>
   ),
   check: <path d="M20 6 9 17l-5-5" />,
+  back: <path d="m15 18-6-6 6-6" />,
+  chat: (
+    <>
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      <path d="M8 9h8" />
+      <path d="M8 13h5" />
+    </>
+  ),
+  cards: (
+    <>
+      <rect x="7" y="3" width="13" height="17" rx="2" />
+      <path d="M4 7v12a2 2 0 0 0 2 2h9" />
+    </>
+  ),
   swap: (
     <>
       <path d="M7 4v14" />

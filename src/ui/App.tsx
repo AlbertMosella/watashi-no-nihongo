@@ -1,12 +1,15 @@
 import { lazy, Suspense, useState, useSyncExternalStore } from 'react';
-import { useDocumentSettings, useSetting } from '@/app/hooks';
-import { categoryLabelKey, useT } from '@/app/i18n';
-import { Icon, IconButton } from '@/ui/components';
+import { useDocumentSettings, useSetting, useUpdateSettings } from '@/app/hooks';
+import { useT } from '@/app/i18n';
+import type { Section } from '@/domain/settings';
+import { Icon, IconButton, SegmentedControl } from '@/ui/components';
 import { Deck } from './features/deck/Deck';
 import styles from './App.module.css';
 
 // Els panells no calen per al primer pintat: es carreguen a part.
 const SettingsSheet = lazy(() => import('./features/settings/SettingsSheet').then((m) => ({ default: m.SettingsSheet })));
+// L'apartat de converses es carrega només quan s'hi entra.
+const Conversations = lazy(() => import('./features/conversations/Conversations').then((m) => ({ default: m.Conversations })));
 const CategorySheet = lazy(() => import('./features/settings/CategorySheet').then((m) => ({ default: m.CategorySheet })));
 // La benvinguda només surt el primer cop: no cal carregar-la per a la resta de visites.
 const Onboarding = lazy(() => import('./features/onboarding/Onboarding').then((m) => ({ default: m.Onboarding })));
@@ -20,7 +23,7 @@ export function App() {
 
   return (
     <>
-      <Suspense fallback={null}>{onboarded ? <Study /> : <Onboarding />}</Suspense>
+      <Suspense fallback={null}>{onboarded ? <Main /> : <Onboarding />}</Suspense>
       <Suspense fallback={null}>
         <UpdatePrompt />
       </Suspense>
@@ -28,9 +31,11 @@ export function App() {
   );
 }
 
-/** Pantalla principal: el mall de targetes amb la barra d'eines i els panells. */
-function Study() {
+/** Pantalla principal: barra d'eines amb els dos apartats (targetes i converses) i els panells. */
+function Main() {
   const t = useT();
+  const section = useSetting('section');
+  const update = useUpdateSettings();
   const [panel, setPanel] = useState<Panel>('none');
   const [opened, setOpened] = useState<ReadonlySet<Panel>>(new Set());
   const categoryIds = useSetting('categoryIds');
@@ -42,23 +47,44 @@ function Study() {
   };
   const close = () => setPanel('none');
 
-  const filterLabel =
-    categoryIds.length === 1 ? t(categoryLabelKey(categoryIds[0]!)) : `${t('filters.open')} · ${categoryIds.length}`;
 
   return (
     <div className={styles.app}>
-      <Deck onOpenFilters={() => open('categories')} keyboardEnabled={panel === 'none'} />
+      {section === 'cards' ? (
+        <Deck onOpenFilters={() => open('categories')} keyboardEnabled={panel === 'none'} />
+      ) : (
+        <Suspense fallback={null}>
+          <Conversations />
+        </Suspense>
+      )}
 
       <header className={styles.toolbar}>
-        <button type="button" className={styles.filterButton} onClick={() => open('categories')}>
-          <Icon name="layers" size={18} />
-          <span>{filterLabel}</span>
-        </button>
+        <SegmentedControl<Section>
+          label={t('section.label')}
+          hideLabel
+          className={styles.sections}
+          value={section}
+          options={[
+            { value: 'cards', label: t('section.cards') },
+            { value: 'conversations', label: t('section.conversations') },
+          ]}
+          onChange={(value) => update({ section: value })}
+        />
         <div className={styles.toolbarEnd}>
           {!online && (
             <span className={styles.offline} title={t('offline.badge')}>
               <Icon name="offline" size={16} />
               <span className="visually-hidden">{t('offline.badge')}</span>
+            </span>
+          )}
+          {section === 'cards' && (
+            <span className={styles.filter}>
+              <IconButton icon="layers" label={t('filters.icon')} onClick={() => open('categories')} />
+              {categoryIds.length > 0 && (
+                <span className={styles.count} aria-hidden="true">
+                  {categoryIds.length}
+                </span>
+              )}
             </span>
           )}
           <IconButton icon="settings" label={t('settings.open')} onClick={() => open('settings')} />

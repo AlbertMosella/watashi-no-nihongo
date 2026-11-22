@@ -12,10 +12,20 @@ export interface SegmentedControlProps<T extends string> {
   value: T;
   options: readonly SegmentOption<T>[];
   onChange: (value: T) => void;
+  /** L'etiqueta només per a lectors de pantalla (p. ex. a la barra d'eines). */
+  hideLabel?: boolean;
+  className?: string;
 }
 
 /** Grup d'opcions exclusives (radiogroup accessible amb fletxes). */
-export function SegmentedControl<T extends string>({ label, value, options, onChange }: SegmentedControlProps<T>) {
+export function SegmentedControl<T extends string>({
+  label,
+  value,
+  options,
+  onChange,
+  hideLabel,
+  className,
+}: SegmentedControlProps<T>) {
   const labelId = useId();
   const index = Math.max(
     0,
@@ -32,8 +42,8 @@ export function SegmentedControl<T extends string>({ label, value, options, onCh
   };
 
   return (
-    <div className={styles.field}>
-      <span id={labelId} className={styles.label}>
+    <div className={cx(styles.field, className)}>
+      <span id={labelId} className={hideLabel ? 'visually-hidden' : styles.label}>
         {label}
       </span>
       <div

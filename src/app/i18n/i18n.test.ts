@@ -1,7 +1,8 @@
 import { CATEGORIES } from '@/data/categories';
+import { TOPICS } from '@/data/topics';
 import { STUDENT_LANGUAGES } from '@/domain/language';
 import { ca } from './ca';
-import { categoryLabelKey, createTranslator, MESSAGES } from './index';
+import { categoryLabelKey, createTranslator, MESSAGES, topicLabelKey } from './index';
 
 describe('i18n', () => {
   it('tots els idiomes tenen les mateixes claus i cap text buit', () => {
@@ -14,6 +15,11 @@ describe('i18n', () => {
 
   it('totes les categories tenen etiqueta', () => {
     const missing = CATEGORIES.map((c) => categoryLabelKey(c.id)).filter((k) => !(k in ca));
+    expect(missing).toEqual([]);
+  });
+
+  it('totes les temàtiques de conversa tenen etiqueta', () => {
+    const missing = TOPICS.map((t) => topicLabelKey(t.id)).filter((k) => !(k in ca));
     expect(missing).toEqual([]);
   });
 

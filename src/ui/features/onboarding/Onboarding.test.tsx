@@ -16,8 +16,9 @@ describe('Onboarding', () => {
   it('explica l’app en català per defecte', () => {
     setup();
     expect(screen.getByRole('heading', { name: 'Watashi no Nihongo' })).toBeInTheDocument();
-    expect(screen.getByText('Aprèn japonès amb targetes')).toBeInTheDocument();
-    expect(screen.getByText(/Tria les categories/)).toBeInTheDocument();
+    expect(screen.getByText('Aprèn japonès amb targetes i converses')).toBeInTheDocument();
+    expect(screen.getByText(/^Targetes:/)).toBeInTheDocument();
+    expect(screen.getByText(/^Converses per temàtiques/)).toBeInTheDocument();
     expect(screen.getByText(/el japonès o el teu idioma/)).toBeInTheDocument();
     expect(screen.getByRole('radio', { name: 'Català' })).toHaveAttribute('aria-checked', 'true');
   });
@@ -26,7 +27,7 @@ describe('Onboarding', () => {
     const { services } = setup();
     await userEvent.click(screen.getByRole('radio', { name: 'English' }));
     expect(services.settings.getSnapshot().language).toBe('en');
-    expect(screen.getByText('Learn Japanese with flashcards')).toBeInTheDocument();
+    expect(screen.getByText('Learn Japanese with flashcards and conversations')).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Start' })).toBeInTheDocument();
   });
 

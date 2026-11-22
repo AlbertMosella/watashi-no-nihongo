@@ -36,3 +36,7 @@ export const LANGUAGE_ENDONYMS: Readonly<Record<StudentLanguage, string>> = {
 export function categoryLabelKey(categoryId: string): MessageKey {
   return `category.${categoryId}` as MessageKey;
 }
+
+export function topicLabelKey(topicId: string): MessageKey {
+  return `topic.${topicId}` as MessageKey;
+}

@@ -4,6 +4,8 @@
   overflow: hidden;
 }
 
+/* Barra d'eines dins la franja --top-bar. El degradat de fons fa que el contingut
+   que passa per sota en fer scroll (converses) no es barregi amb els botons. */
 .toolbar {
   position: absolute;
   z-index: 10;
@@ -15,6 +17,7 @@
   justify-content: space-between;
   gap: var(--space-3);
   padding: calc(var(--safe-top) + var(--space-3)) var(--space-4) var(--space-3);
+  background: linear-gradient(var(--color-bg) 70%, transparent);
   pointer-events: none;
 }
 
@@ -22,38 +25,56 @@
   pointer-events: auto;
 }
 
-.toolbarEnd {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
+/* Selector d'apartat: ocupa l'espai que deixen els botons i mai els trepitja. */
+.sections {
+  flex: 1;
+  min-width: 0;
+  max-width: 280px;
 }
 
-.filterButton {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  min-height: 44px;
-  max-width: 65vw;
-  padding: 0 var(--space-4);
+.sections [role='radiogroup'] {
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--color-surface) 82%, transparent);
+  background: color-mix(in srgb, var(--color-surface-2) 85%, transparent);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  transition: transform var(--duration-fast) var(--ease-out);
 }
 
-.filterButton span {
+.sections [role='radio'] {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.filterButton:active {
-  transform: scale(0.96);
+.toolbarEnd {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filter {
+  position: relative;
+  display: inline-flex;
+}
+
+/* Nombre de categories seleccionades, com una insígnia sobre la icona. */
+.count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: grid;
+  place-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border: 2px solid var(--color-bg);
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-size: 0.7rem;
+  font-weight: 800;
+  pointer-events: none;
 }
 
 .offline {
