@@ -1,0 +1,81 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease;
+}
+
+.button:active,
+.iconButton:active {
+  transform: scale(0.95);
+}
+
+.button:disabled,
+.iconButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.md {
+  min-height: 44px;
+  padding: 0 var(--space-5);
+}
+
+.sm {
+  min-height: 34px;
+  padding: 0 var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.primary {
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  box-shadow: var(--shadow-sm);
+}
+
+.secondary {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+.ghost {
+  background: transparent;
+  color: inherit;
+}
+
+.ghost:hover,
+.secondary:hover {
+  background: var(--color-surface-2);
+}
+
+.iconButton {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) ease;
+}
+
+.surface {
+  background: color-mix(in srgb, var(--color-surface) 82%, transparent);
+  border-color: var(--color-border);
+  color: var(--color-text);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

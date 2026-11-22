@@ -1,0 +1,167 @@
+/*
+ * Design tokens. Tots els components fan servir aquestes variables, mai colors "a pèl".
+ *
+ * Colors de categoria: cada element amb [data-hue] defineix --hue i els colors pastel
+ * es recalculen allà mateix (una variable amb var() es resol on es declara, per això
+ * les fórmules es declaren també a [data-hue]). El tema només canvia la saturació/lluminositat.
+ */
+:root {
+  color-scheme: light;
+
+  /* Superfícies i text */
+  --color-bg: #faf7f5;
+  --color-surface: #ffffff;
+  --color-surface-2: #f3eeea;
+  --color-border: #e7dfd8;
+  --color-text: #2b2630;
+  --color-text-muted: #6f6874;
+  --color-accent: #d0567a;
+  --color-accent-contrast: #ffffff;
+  --color-focus: #7a6cf0;
+  --color-overlay: rgb(30 24 32 / 0.35);
+
+  /* Paràmetres dels colors de targeta (tema clar) */
+  --cb-s: 70%;
+  --cb-l: 93%;
+  --cb2-s: 62%;
+  --cb2-l: 88%;
+  --cbo-s: 48%;
+  --cbo-l: 83%;
+  --ci-s: 32%;
+  --ci-l: 20%;
+  --cim-s: 18%;
+  --cim-l: 40%;
+  --ca-s: 52%;
+  --ca-l: 44%;
+  --csh-l: 35%;
+  --csh-a: 0.28;
+
+  /* Tipografia: fonts del sistema (0 KB i offline). El japonès va primer a --font-ja. */
+  --font-ui: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-ja: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Noto Sans CJK JP', 'Yu Gothic UI',
+    'Yu Gothic', Meiryo, system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.75rem;
+
+  /* Espais */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgb(40 30 40 / 0.06), 0 2px 8px rgb(40 30 40 / 0.06);
+  --shadow-lg: 0 12px 40px rgb(40 30 40 / 0.18);
+
+  /* Moviment */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.45, 0.64, 1);
+  --duration-fast: 160ms;
+  --duration-base: 260ms;
+  --duration-flip: 650ms;
+
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /*
+   * Franges reservades: res de la targeta hi entra.
+   *  - a dalt, la barra d'eines (botons de 44px + marges);
+   *  - a baix, el comptador (esquerra) i el badge "Powered by Netlify" (dreta, ~170×37px a 12px de la vora).
+   */
+  --top-bar: 68px;
+  --bottom-bar: 64px;
+}
+
+/* Fórmules dels colors de targeta. */
+:root,
+[data-hue] {
+  --card-bg: hsl(var(--hue, 30) var(--cb-s) var(--cb-l));
+  --card-bg-2: hsl(var(--hue, 30) var(--cb2-s) var(--cb2-l));
+  --card-border: hsl(var(--hue, 30) var(--cbo-s) var(--cbo-l));
+  --card-ink: hsl(var(--hue, 30) var(--ci-s) var(--ci-l));
+  --card-ink-muted: hsl(var(--hue, 30) var(--cim-s) var(--cim-l));
+  --card-accent: hsl(var(--hue, 30) var(--ca-s) var(--ca-l));
+  --card-shadow: 0 1px 2px hsl(var(--hue, 30) 30% var(--csh-l) / calc(var(--csh-a) * 0.3)),
+    0 18px 40px -12px hsl(var(--hue, 30) 40% var(--csh-l) / var(--csh-a));
+}
+
+/* Tema fosc: automàtic segons el sistema (llevat que l'usuari forci "clar") o forçat. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --color-bg: #16141a;
+    --color-surface: #211e26;
+    --color-surface-2: #2a2630;
+    --color-border: #37323e;
+    --color-text: #eeeaf2;
+    --color-text-muted: #a49dab;
+    --color-accent: #f08cab;
+    --color-accent-contrast: #1d1a21;
+    --color-focus: #a99cff;
+    --color-overlay: rgb(0 0 0 / 0.55);
+    --cb-s: 24%;
+    --cb-l: 21%;
+    --cb2-s: 20%;
+    --cb2-l: 16%;
+    --cbo-s: 22%;
+    --cbo-l: 30%;
+    --ci-s: 40%;
+    --ci-l: 92%;
+    --cim-s: 18%;
+    --cim-l: 70%;
+    --ca-s: 60%;
+    --ca-l: 74%;
+    --csh-l: 3%;
+    --csh-a: 0.6;
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+    --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.5);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #16141a;
+  --color-surface: #211e26;
+  --color-surface-2: #2a2630;
+  --color-border: #37323e;
+  --color-text: #eeeaf2;
+  --color-text-muted: #a49dab;
+  --color-accent: #f08cab;
+  --color-accent-contrast: #1d1a21;
+  --color-focus: #a99cff;
+  --color-overlay: rgb(0 0 0 / 0.55);
+  --cb-s: 24%;
+  --cb-l: 21%;
+  --cb2-s: 20%;
+  --cb2-l: 16%;
+  --cbo-s: 22%;
+  --cbo-l: 30%;
+  --ci-s: 40%;
+  --ci-l: 92%;
+  --cim-s: 18%;
+  --cim-l: 70%;
+  --ca-s: 60%;
+  --ca-l: 74%;
+  --csh-l: 3%;
+  --csh-a: 0.6;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-flip: 0ms;
+  }
+}
