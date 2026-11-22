@@ -1,0 +1,95 @@
+.deck {
+  position: relative;
+  height: 100%;
+}
+
+.scroller {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+}
+
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+
+.spacer {
+  position: relative;
+  width: 100%;
+}
+
+.state {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  color: var(--color-text-muted);
+  text-align: center;
+  pointer-events: none;
+}
+
+.state > * {
+  pointer-events: auto;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Comptador a baix a l'esquerra, centrat verticalment a la franja inferior.
+   La meitat dreta queda lliure per al badge de Netlify. */
+.footer {
+  position: absolute;
+  left: var(--space-5);
+  bottom: var(--safe-bottom);
+  height: var(--bottom-bar);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  max-width: 45%;
+  pointer-events: none;
+}
+
+.progress {
+  flex: none;
+  width: 64px;
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: var(--color-accent);
+  transform-origin: left;
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.position {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

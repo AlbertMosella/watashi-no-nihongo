@@ -1,0 +1,308 @@
+/* Cada targeta ocupa una "pantalla" del contenidor amb scroll. */
+.slot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  padding: calc(var(--safe-top) + var(--top-bar)) var(--space-4) calc(var(--safe-bottom) + var(--bottom-bar));
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  perspective: 1400px;
+  contain: layout style;
+}
+
+/* Animació de scroll: --p (-1..1) i --ap = |p| s'escriuen des de JS a cada frame. */
+.motion {
+  width: min(100%, 440px);
+  height: min(100%, 600px);
+  transform: translateY(calc(var(--p, 0) * -8%)) rotateX(calc(var(--p, 0) * -14deg))
+    scale(calc(1 - var(--ap, 0) * 0.12));
+  opacity: calc(1 - var(--ap, 0) * 0.7);
+  will-change: transform, opacity;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  perspective: 1600px;
+}
+
+/* Mentre gira, la targeta s'"aixeca" una mica. Dues animacions iguals perquè es reiniciï a cada gir. */
+.liftA {
+  animation: lift var(--duration-flip) var(--ease-out);
+}
+.liftB {
+  animation: lift2 var(--duration-flip) var(--ease-out);
+}
+@keyframes lift {
+  40% {
+    transform: scale(1.05) translateY(-8px);
+  }
+}
+@keyframes lift2 {
+  40% {
+    transform: scale(1.05) translateY(-8px);
+  }
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform var(--duration-flip) var(--ease-spring);
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-5);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(120% 70% at 15% 0%, rgb(255 255 255 / 0.45), transparent 60%),
+    linear-gradient(160deg, var(--card-bg), var(--card-bg-2));
+  color: var(--card-ink);
+  box-shadow: var(--card-shadow);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  container-type: inline-size;
+  overflow: hidden;
+}
+
+:global([data-theme='dark']) .face {
+  background:
+    radial-gradient(120% 70% at 15% 0%, rgb(255 255 255 / 0.06), transparent 60%),
+    linear-gradient(160deg, var(--card-bg), var(--card-bg-2));
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme='light'])) .face {
+    background:
+      radial-gradient(120% 70% at 15% 0%, rgb(255 255 255 / 0.06), transparent 60%),
+      linear-gradient(160deg, var(--card-bg), var(--card-bg-2));
+  }
+}
+
+/* Petit motiu decoratiu: un cercle suau a la cantonada (com un segell). */
+.face::after {
+  content: '';
+  position: absolute;
+  right: -60px;
+  bottom: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: var(--card-accent);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.faceHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--card-ink-muted);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.speak {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--card-accent) 14%, transparent);
+  color: var(--card-accent);
+  transition: transform var(--duration-fast) var(--ease-spring);
+}
+
+.speak:active {
+  transform: scale(0.88);
+}
+
+.speak:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 0;
+  padding: var(--space-2) 0;
+  text-align: center;
+}
+
+.content p {
+  margin: 0;
+}
+
+.meaning {
+  font-size: clamp(1.5rem, calc(190cqi / (var(--chars) + 3)), 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.sound {
+  font-size: clamp(3rem, 22cqi, 5rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.kana {
+  font-family: var(--font-ja);
+  font-size: min(9rem, calc(80cqi / var(--chars)));
+  line-height: 1;
+}
+
+.word {
+  font-family: var(--font-ja);
+  font-size: clamp(1.5rem, calc(84cqi / var(--chars)), 3.6rem);
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
+.kanji {
+  font-family: var(--font-ja);
+  font-size: clamp(5rem, 40cqi, 8.5rem);
+  line-height: 1.05;
+}
+
+.romaji {
+  color: var(--card-ink-muted);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.details {
+  display: grid;
+  gap: var(--space-3);
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.readings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+}
+
+.readings div {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.readings dt {
+  color: var(--card-accent);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.readings dd {
+  margin: 0;
+  font-size: var(--text-lg);
+}
+
+.example {
+  display: grid;
+  gap: 2px;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--card-accent) 9%, transparent);
+}
+
+.exampleLabel {
+  color: var(--card-accent);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.exampleJa {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.exampleRomaji {
+  color: var(--card-ink-muted);
+  font-size: var(--text-sm);
+}
+
+.exampleMeaning {
+  font-weight: 600;
+}
+
+.faceFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 24px;
+  color: var(--card-ink-muted);
+  opacity: 0.6;
+  font-size: var(--text-xs);
+  font-weight: 600;
+}
+
+/* Pista de la primera targeta: més visible i amb un petit balanceig. */
+.hint {
+  opacity: 0.9;
+  animation: nudge 2.4s ease-in-out infinite;
+}
+
+@keyframes nudge {
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion {
+    transform: none;
+    opacity: 1;
+  }
+  .liftA,
+  .liftB {
+    animation: none;
+  }
+}
